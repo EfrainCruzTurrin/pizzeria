@@ -4,52 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PizzaLine - Sucursales</title>
+
+    <!-- Importa el CSS general (incluye estilos base, header, footer y tarjetas) -->
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
+<!-- HEADER PRINCIPAL -->
 <header>
     <div class="logo">
+        <!-- Logo clickeable que redirige al index -->
         <a href="../index.html"><img src="../img/logo.png" alt="PizzaLine Logo"></a>
         <h1>PizzaLine</h1>
     </div>
+
+    <!-- Navegación principal -->
     <nav>
         <ul>
             <li><a href="acerca.html">Acerca de Nosotros</a></li>
             <li><a href="carta.html">Carta</a></li>
             <li><a href="contacto.html">Contacto</a></li>
+
+            <!-- Opción activa (estamos en Sucursales) -->
             <li><a href="sucursales.html" class="active">Sucursales</a></li>
         </ul>
     </nav>
+
+    <!-- Botón de Login -->
     <div class="login-btn">
         <a href="login.html">Login</a>
     </div>
 </header>
+<!-- FIN HEADER -->
 
 <main>
     <section class="sucursales">
+        <!-- Título de la sección -->
         <h2>Nuestras Sucursales</h2>
 
+        <!-- CONTENEDOR DE TARJETAS (misma estructura visual de "promos") -->
         <div class="promos">
+
+            <!-- TARJETA 1 -->
             <div class="promo-card">
                 <h3>Villa María</h3>
                 <p>Av. San Martín 850<br>Tel: (0353) 455-7777</p>
             </div>
+
+            <!-- TARJETA 2 -->
             <div class="promo-card">
                 <h3>Río Cuarto</h3>
                 <p>Belgrano 450<br>Tel: (0358) 462-9000</p>
             </div>
+
+            <!-- TARJETA 3 -->
             <div class="promo-card">
                 <h3>Villa Regina</h3>
                 <p>Rivadavia 1020<br>Tel: (0298) 445-2000</p>
             </div>
+
         </div>
+        <!-- FIN CONTENEDOR PROMOS -->
     </section>
 </main>
 
+<!-- FOOTER GENERAL -->
 <footer>
     <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
 </footer>
+<!-- FIN FOOTER -->
 
 </body>
 </html>
