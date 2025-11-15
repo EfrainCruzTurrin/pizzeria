@@ -375,3 +375,56 @@ body {
 
 /* ===== end login ===== */
 
+
+/* --- start sucursales section --- */
+
+/* Contenedor general */
+.sucursales {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.sucursales h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #d32f2f; /* rojo estilo PizzaLine */
+}
+
+/* Contenedor de tarjetas (usa mismo estilo que promos iniciales) */
+.promos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Tarjetas individuales */
+.promo-card {
+    background: #fff;
+    width: 280px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* misma sombra del css original */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover con efecto elegante */
+.promo-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.promo-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #c62828;
+}
+
+.promo-card p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* --- end sucursales section --- */
+
