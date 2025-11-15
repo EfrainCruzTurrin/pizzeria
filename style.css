@@ -1,3 +1,186 @@
+/* ===== main page ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #fff8f0;
+    color: #333;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d32f2f;
+    color: white;
+    padding: 10px 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-btn a {
+    background-color: #fff;
+    color: #d32f2f;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== MAIN ===== */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.promociones h2 {
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+.promos {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.promo-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.promo-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* ===== ASIDE ===== */
+aside {
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+aside section {
+    margin-bottom: 20px;
+}
+
+aside h3 {
+    color: #d32f2f;
+    margin-bottom: 8px;
+}
+
+.bancos img {
+    width: 80px;
+    margin: 5px;
+}
+
+/* ===== REGISTRO ===== */
+.registro {
+    background-color: #ffe5e5;
+    text-align: center;
+    padding: 30px;
+}
+
+.registro form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.registro input, .registro button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.registro button {
+    background-color: #d32f2f;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ===== BOTÓN FLOTANTE ===== */
+#btn-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#btn-flotante:hover {
+    background-color: #b71c1c;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* ===== end of main page ===== */
+
 /* INICIO DE CARTA */
 /* Fondo general */
 #bodyCarta {
