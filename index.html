@@ -1,37 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PizzaLine</title>
-    <link rel="stylesheet" href="style.css">
+    <title>PizzaLine - Inicio</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>PizzaLine</h1>
 
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="PizzaLine Logo">
+            <h1>PizzaLine</h1>
+        </div>
+
+        <nav>
             <ul>
-                <a href=""><li>Home</li></a>
-                <a href=""><li>Carta</li></a>
-                <a href=""><li>Pedido</li></a>
-                <a href=""><li>Contacto</li></a>
-                <a href=""><li>Quienes somos?</li></a>
+                <li><a href="pages/acerca.html">Acerca de Nosotros</a></li>
+                <li><a href="pages/carta.html">Carta</a></li>
+                <li><a href="pages/contacto.html">Contacto</a></li>
+                <li><a href="pages/sucursales.html">Sucursales</a></li>
             </ul>
         </nav>
+
+        <div class="login-btn">
+            <a href="pages/login.html">Login</a>
+        </div>
     </header>
 
     <main>
-        
+        <section class="promociones">
+            <h2>Promociones y Combos</h2>
+            <div class="promos">
+                <div class="promo-card">
+                    <img src="img/promo1.jpg" alt="Promo 1">
+                    <h3>2x1 en Muzza</h3>
+                    <p>Todos los martes y jueves</p>
+                </div>
+                <div class="promo-card">
+                    <img src="img/promo2.jpg" alt="Promo 2">
+                    <h3>Combo Familiar</h3>
+                    <p>2 Pizzas + 1 Gaseosa a $8000</p>
+                </div>
+            </div>
+        </section>
+
+        <aside>
+            <section class="recomendaciones">
+                <h3>🍕 Recomendaciones</h3>
+                <ul>
+                    <li>Fugazzeta con cheddar</li>
+                    <li>Napolitana Especial</li>
+                    <li>Calabresa Picante</li>
+                </ul>
+            </section>
+
+            <section class="top3">
+                <h3>🏆 Top 3 Más Pedidas</h3>
+                <ol>
+                    <li>Muzzarella</li>
+                    <li>Napolitana</li>
+                    <li>4 Quesos</li>
+                </ol>
+            </section>
+
+            <section class="descuentos">
+                <h3>💳 Descuentos Bancarios</h3>
+                <div class="bancos">
+                    <img src="img/bancos/banco1.png" alt="Banco 1">
+                    <img src="img/bancos/banco2.png" alt="Banco 2">
+                    <img src="img/bancos/banco3.png" alt="Banco 3">
+                </div>
+            </section>
+        </aside>
     </main>
 
-
-
+    <section class="registro">
+        <h2>Registrate para hacer tu pedido</h2>
+        <form id="registroForm" action="pages/registro.html" method="get">
+            <input type="text" placeholder="Nombre y Apellido" required>
+            <input type="tel" placeholder="Teléfono" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">Crear cuenta</button>
+        </form>
+    </section>
 
     <footer>
-        <p>© Todos los derechos reservados</p>
+        <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
     </footer>
 
+    <button id="btn-flotante">🛒</button>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
-
