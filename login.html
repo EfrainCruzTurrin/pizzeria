@@ -8,26 +8,33 @@
 </head>
 <body>
 
-<section class="registro">
-    <h2>Iniciar Sesión</h2>
-    <form id="loginForm">
-        <input type="email" placeholder="Correo Electrónico" required>
-        <input type="password" placeholder="Contraseña" required>
-        <button type="submit">Ingresar</button>
-    </form>
-    <p>¿No tenés cuenta? <a href="registro.html">Registrate acá</a></p>
-</section>
+    <!-- ===== HEADER LOGIN ===== -->
+    <div class="headerLogin">
+        <h2>PizzaLine</h2>
+    </div>
 
-<footer>
-    <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
-</footer>
+    <!-- ===== FORM LOGIN ===== -->
+    <section class="registro">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">Ingresar</button>
+        </form>
+        <p>¿No tenés cuenta? <a href="registro.html">Registrate acá</a></p>
+    </section>
 
-<script>
-document.getElementById('loginForm').addEventListener('submit', (e)=>{
-    e.preventDefault();
-    alert('Inicio de sesión en construcción 🔐');
-});
-</script>
+    <!-- ===== FOOTER LOGIN ===== -->
+    <div class="footerLogin">
+        <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
+    </div>
+
+    <script>
+    document.getElementById('loginForm').addEventListener('submit', (e)=>{
+        e.preventDefault();
+        alert('Inicio de sesión en construcción 🔐');
+    });
+    </script>
 
 </body>
 </html>
