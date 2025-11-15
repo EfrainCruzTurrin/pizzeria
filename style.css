@@ -1,0 +1,107 @@
+/* INICIO DE CARTA */
+/* Fondo general */
+#bodyCarta {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #dd1111f5;
+}
+
+/* Título */
+#tituloCarta {
+  text-align: center;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  color: hsl(64, 92%, 63%);
+  margin-top: 25px;
+  font-size: 38px;
+  letter-spacing: 2px;
+}
+
+/* Contenedor principal */
+#containerCarta {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Carta completa */
+.carta {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  max-width: 1000px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Cada seccion */
+.carta section {
+  width: 48%;
+  margin-bottom: 25px;
+}
+
+/* Títulos de sección */
+.carta section h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+/* Lista general */
+.listaPizzas,
+.listaBebidas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cada ítem */
+.listaPizzas li,
+.listaBebidas li {
+  background: #c4c1c249;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #e6d2c3;
+}
+
+/* Nombre del producto */
+.listaPizzas h3,
+.listaBebidas h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Descripción */
+.listaPizzas p,
+.listaBebidas p {
+  margin: 5px 0;
+  line-height: 1.4;
+}
+
+/* Precio */
+.precio {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1a8f1a;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background: #ffe8d1;
+  color: #333;
+}
+
+#iconPizza, #iconBebidas {
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+}
+/* FIN CARTA */

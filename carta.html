@@ -1,54 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARTA PIZZALINE</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARTA PIZZALINE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav>
-        <h1>Carta de pizzas</h1>
+<body id="bodyCarta">
 
-    </nav>
-
+  <nav>
+    
+  </nav>
+  <h1 id="tituloCarta"><strong>MENÚ PIZZALINE</strong></h1>
+  <div id="containerCarta">
     <main>
-        <ul class="listaPizzas">
-            <li><h3>Pizza Muzarella</h3>
-            <img src="ejemplo.img" alt="Pizza Muzarella">
-            <p>La clásica pizza con salsa de tomate, abundante queso muzarella y un toque de orégano. Ideal para los que aman lo simple y delicioso.</p>
-            <p class="precio">Precio: $12.000</p>
+      <div class="carta">
+        <section>
+          <h2>Pizzas</h2>
+          <img src="images/pizza.png" width="120px" alt="icono de pizza" id="iconPizza">
+          <ul class="listaPizzas">
+            <li>
+              <h3>Pizza Muzarella</h3>
+              <p>La clásica pizza con salsa de tomate, abundante queso muzarella y un toque de orégano. Ideal para los que aman lo simple y delicioso.</p>
+              <p class="precio">Precio: $12.000</p>
             </li>
-
-            <li><h3>Pizza 4 Quesos</h3>
-            <img src="ejemplo.img" alt="Pizza 4 Quesos">
-            <p>Una mezcla irresistible de muzarella, gorgonzola, parmesano y provolone. Perfecta para los fanáticos del queso</p>
+            <li>
+              <h3>Pizza 4 Quesos</h3>
+              <p>Una mezcla irresistible de muzarella, gorgonzola, parmesano y provolone. Perfecta para los fanáticos del queso.</p>
+              <p class="precio">Precio: $14.000</p>
+            </li>
+            <li>
+              <h3>Pizza Napolitana</h3>
+              <p>Con rodajas de tomate fresco, ajo, queso y albahaca. Una combinación fresca y aromática.</p>
+              <p class="precio">Precio: $13.500</p>
+            </li>
+            <li>
+              <h3>Pizza Calabresa</h3>
+              <p>Una pizza potente con rodajas de longaniza calabresa, queso fundido y un toque picante. Ideal para los amantes de los sabores intensos.</p>
+              <p class="precio">Precio: $15.000</p>
+            </li>
+          <li>
+            <h3>Pizza Fugazzeta</h3>
+            <p>Una opción bien argentina: abundante mozzarella cubierta con mucha cebolla salteada y un toque de orégano.</p>
             <p class="precio">Precio: $14.000</p>
+          </li>
+          <li>
+            <h3>Pizza Rúcula y Jamón Crudo</h3>
+            <p>Base de mozzarella, coronada con rúcula fresca, lascas de parmesano y jamón crudo recién cortado.</p>
+            <p class="precio">Precio: $18.000</p>
+          </li>
+
+          </ul>
+        </section>
+
+        <section>
+          <h2>Bebidas</h2>
+          <img src="images/1261134.png" alt="icono bebidas" width="120px" id="iconBebidas">
+          <ul class="listaBebidas">
+            <li>
+              <h3>Coca Cola 500ml</h3>
+              <p>Bebida gasificada.</p>
+              <p class="precio">Precio: $3.000</p>
             </li>
-
-            <li><h3>Pizza Napolitana</h3>
-            <img src="ejemplo.img" alt="Pizza Napolitana">
-            <p>Con rodajas de tomate fresco, ajo, queso y albahaca. Una combinación fresca y aromática.</p>
-            <p class="precio">Precio: 13.500</p>
+            <li>
+              <h3>Agua Mineral 500ml</h3>
+              <p>Agua pura y refrescante, sin gas.</p>
+              <p class="precio">Precio: $2.000</p>
             </li>
-
-            <li><h3>Pizza Calabresa</h3>
-            <img src="ejemplo.img" alt="Pizza Calabresa">
-            <p>Una pizza potente con rodajas de longaniza calabresa, queso fundido y un toque picante. Ideal para los amantes de los sabores intensos.</p>
-            <p class="precio">Precio: $15.000</p>
+            <li>
+              <h3>Cerveza Quilmes 1L</h3>
+              <p>Cerveza rubia argentina, ideal para acompañar pizzas.</p>
+              <p class="precio">Precio: $5.000</p>
             </li>
-        </ul>
-
-        <h1>Carta de Bebidas</h1>
-        <ul>
-            <li><h3>Pizza Calabresa</li>
-            
-
-        </ul>
+            <li>
+              <h3>Sprite 500ml</h3>
+              <p>Bebida gasificada con sabor a lima y limón.</p>
+              <p class="precio">Precio: $3.000</p>
+            </li>
+            <li>
+              <h3>Fanta Naranja 500ml</h3>
+              <p>Refresco gasificado con sabor a naranja.</p>
+              <p class="precio">Precio: $3.000</p>
+            </li>
+            <li>
+              <h3>Pepsi 500ml</h3>
+              <p>Bebida cola con sabor clásico.</p>
+              <p class="precio">Precio: $3.000</p>
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
+  </div>
 
-    <footer>
-        <!--ACÁ IRIA EL FOOTER DE LA PAGINA PRINCIPAL-->
-    </footer>
+  <footer>
+    © 2025 Pizzaline — Todos los derechos reservados.
+  </footer>
 
 </body>
 </html>
