@@ -8,27 +8,30 @@
 </head>
 <body>
 
-    <header>
+    <!-- ===== HEADER ===== -->
+    <div class="headerPrincipal">
         <div class="logo">
             <img src="img/logo.png" alt="PizzaLine Logo">
             <h1>PizzaLine</h1>
         </div>
 
-        <nav>
+        <!-- NAV -->
+        <div class="navPrincipal">
             <ul>
                 <li><a href="pages/acerca.html">Acerca de Nosotros</a></li>
                 <li><a href="pages/carta.html">Carta</a></li>
                 <li><a href="pages/contacto.html">Contacto</a></li>
                 <li><a href="pages/sucursales.html">Sucursales</a></li>
             </ul>
-        </nav>
+        </div>
 
         <div class="login-btn">
             <a href="pages/login.html">Login</a>
         </div>
-    </header>
+    </div>
 
-    <main>
+    <!-- ===== MAIN ===== -->
+    <div class="mainPrincipal">
         <section class="promociones">
             <h2>Promociones y Combos</h2>
             <div class="promos">
@@ -45,7 +48,8 @@
             </div>
         </section>
 
-        <aside>
+        <!-- ===== ASIDE ===== -->
+        <div class="asidePrincipal">
             <section class="recomendaciones">
                 <h3>🍕 Recomendaciones</h3>
                 <ul>
@@ -72,9 +76,10 @@
                     <img src="img/bancos/banco3.png" alt="Banco 3">
                 </div>
             </section>
-        </aside>
-    </main>
+        </div>
+    </div>
 
+    <!-- ===== REGISTRO ===== -->
     <section class="registro">
         <h2>Registrate para hacer tu pedido</h2>
         <form id="registroForm" action="pages/registro.html" method="get">
@@ -86,8 +91,18 @@
         </form>
     </section>
 
-    <footer>
+    <!-- ===== FOOTER ===== -->
+    <div class="footerPrincipal">
         <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
+    </div>
+
+    <!-- ===== BOTÓN FLOTANTE ===== -->
+    <button id="btn-flotante">🛒</button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
     </footer>
 
     <button id="btn-flotante">🛒</button>
