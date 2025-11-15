@@ -288,3 +288,90 @@ footer {
   margin-bottom: 15px;
 }
 /* FIN CARTA */
+
+/* ===== start login ===== */
+
+/* Reset general (igual al original) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #fff8f0;
+    color: #333;
+}
+
+/* ===== HEADER LOGIN (misma estética que header original) ===== */
+.headerLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d32f2f;
+    color: white;
+    padding: 15px 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ===== FORM LOGIN (misma estética que .registro original) ===== */
+.registro {
+    background-color: #ffe5e5;
+    text-align: center;
+    padding: 30px;
+    max-width: 400px;
+    margin: 40px auto;
+    border-radius: 10px;
+}
+
+.registro h2 {
+    color: #d32f2f;
+    margin-bottom: 15px;
+}
+
+.registro form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.registro input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
+
+.registro button {
+    background-color: #d32f2f;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.registro button:hover {
+    background-color: #b71c1c;
+}
+
+.registro a {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== FOOTER LOGIN (misma estética que footer original) ===== */
+.footerLogin {
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* ===== end login ===== */
+
