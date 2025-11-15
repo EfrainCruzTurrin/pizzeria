@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <h2>Agregar Item</h2>
+        <a href="gestionarMenu.html"><button type="button">Volver</button></a>
+    </nav>
+
+    <div>
+        <form id="form-agregar">
+
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" required>
+
+            <label>Tipo</label>
+            <div>
+                <label><input type="radio" name="tipo" value="Pizza" required> Pizza</label>
+                <label><input type="radio" name="tipo" value="Bebida" required> Bebida</label>
+            </div>
+
+            <label for="precio">Precio</label>
+            <input type="number" id="precio" required>
+
+            <label for="disponible">
+                Disponible
+                <input type="checkbox" id="disponible" checked>
+            </label>
+
+            <button type="submit">Cargar Producto</button>
+        </form>
+    </div>
+
+    <div id="mensaje"></div>
+
+</body>
+
+</html>

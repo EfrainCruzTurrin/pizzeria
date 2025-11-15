@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <main>
+
+        <h1>Gestión de pedidos</h1>
+
+
+        <section>
+            <h2>Filtrar por estado</h2>
+            <label for="filtro-estado">Estado</label>
+            <select id="filtro-estado" name="filtro-estado">
+                <option value="todos">Todos</option>
+                <option value="pendiente">Pendiente</option>
+                <option value="preparacion">En preparación</option>
+                <option value="entregado">Entregado</option>
+            </select>
+        </section>
+
+
+        <section>
+            <h2>Pedidos</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Pedido</th>
+                        <th>Usuario</th>
+                        <th>Total</th>
+                        <th>Estado</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>#1</td>
+                        <td>Juan Pérez</td>
+                        <td>$8000</td>
+                        <td>
+                            <select name="estado-pedido">
+                                <option value="pendiente" selected>Pendiente</option>
+                                <option value="preparacion">En preparación</option>
+                                <option value="entregado">Entregado</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button>Guardar estado</button>
+                        </td>
+                    </tr>
+
+           
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    </body>
+
 </html>
