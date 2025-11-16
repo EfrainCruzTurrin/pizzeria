@@ -483,3 +483,306 @@ body {
   font-size: 17px;
 }
 /* --- end carrito --- */
+
+
+
+/* INICIO REGISTRO */
+/* Fondo general */
+#bodyRegistro {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background: #c00707;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+/* Título principal */
+#h1Registro {
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #000000;
+  margin-bottom: 30px;
+  font-size: 36px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Contenedor del formulario */
+#formulario {
+  background: #ffffff;
+  padding: 35px 40px;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Cada campo */
+form div {
+  margin-bottom: 22px;
+}
+
+/* Etiquetas */
+.labelReg {
+  display: block;
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Inputs */
+#nombre,
+#apellido,
+#telefono,
+#email,
+#password {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  background: #f9f9f9;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Focus en inputs */
+#nombre:focus,
+#apellido:focus,
+#telefono:focus,
+#email:focus,
+#password:focus {
+  outline: none;
+  border-color: #f2fa01;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(17, 102, 221, 0.1);
+}
+
+/* Botón de envío */
+#botonReg {
+  width: 100%;
+  padding: 16px;
+  background: #dd1111;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+#botonReg:hover {
+  background: #ff0000;
+}
+
+/* FIN REGISTRO */
+/* INICIO INFO */
+#infoTodo {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#bodyInfo {
+  font-family: "Open Sans", sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* HEADER */
+#headerInfo {
+  background: #c41e1e;
+  padding: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#h1Info {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  color: #ffd700;
+  font-size: 48px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#navInfo {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.aInfo {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.aInfo:hover {
+  background: #ffffff;
+  color: #c41e1e;
+}
+
+/* SECCIONES */
+.sectionInfo {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 40px 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.h2SectionInfo {
+  font-family: "Bebas Neue", sans-serif;
+  color: #c41e1e;
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  border-bottom: 4px solid #ffd700;
+  padding-bottom: 10px;
+}
+
+.h3SectionInfo {
+  color: #c41e1e;
+  font-size: 28px;
+  margin: 25px 0 15px;
+  font-weight: 700;
+}
+
+.pSectionInfo {
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.imgSectionInfo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 25px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* INICIO */
+#inicio {
+  text-align: center;
+  background: linear-gradient(135deg, #fff 0%, #ffe8e8 100%);
+}
+
+#inicio img {
+  max-width: 300px;
+}
+
+#inicio p {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+}
+
+/* HISTORIA */
+#historia hr {
+  border: none;
+  border-top: 2px dashed #ffd700;
+  margin: 30px 0;
+}
+
+#historia blockquote {
+  background: #fff8dc;
+  border-left: 5px solid #c41e1e;
+  padding: 20px 25px;
+  margin: 25px 0;
+  font-style: italic;
+  border-radius: 8px;
+}
+
+#historia blockquote p {
+  color: #666;
+  text-align: left;
+}
+
+#historia ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#historia ul li {
+  background: #fff0f0;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border-left: 4px solid #c41e1e;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+#historia ul li::before {
+  content: "🍕 ";
+  margin-right: 10px;
+}
+
+/* GALERÍA */
+#galeria {
+  background: linear-gradient(135deg, #ffe8e8 0%, #fff 100%);
+}
+
+#galeria figure {
+  margin: 30px 0;
+  text-align: center;
+}
+
+#galeria figure img {
+  border: 5px solid #ffd700;
+}
+
+#galeria figcaption {
+  margin-top: 12px;
+  font-weight: 600;
+  color: #c41e1e;
+  font-size: 15px;
+}
+
+/* CONTACTO */
+#contacto {
+  background: #c41e1e;
+  color: #ffffff;
+}
+
+#contacto h2 {
+  color: #ffd700;
+  border-bottom-color: #ffffff;
+}
+
+#contacto h3 {
+  color: #ffd700;
+  margin-top: 30px;
+}
+
+#contacto p {
+  text-align: left;
+  font-size: 17px;
+  margin: 10px 0;
+}
+
+#contacto strong {
+  color: #ffd700;
+}
+/* FIN INFO */
