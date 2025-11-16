@@ -50,17 +50,18 @@ function actualizarCarrito() {
   const cont = document.getElementById("carrito-container");
   const total = document.getElementById("carrito-total");
 
-  if (!cont || !total) return; // si no estamos en pedidos.html, no hace nada
+  if (!cont || !total) return;
 
   cont.innerHTML = "";
 
   carrito.forEach(item => {
     cont.innerHTML += `
       <div class="carrito-item">
+
         <span>${item.nombre}</span>
         <span>$${item.precio}</span>
 
-        <div class="controles">
+        <div class="carrito-controles">
           <button onclick="cambiarCantidad('${item.id}', -1)">-</button>
           <span>${item.cantidad}</span>
           <button onclick="cambiarCantidad('${item.id}', 1)">+</button>
@@ -103,7 +104,7 @@ async function finalizarPedido() {
   };
 
   try {
-    const resultado = await enviarPedido(pedido); // viene de orders.js
+    const resultado = await enviarPedido(pedido);
     alert("Pedido enviado con éxito!");
     vaciarCarrito();
     window.location.href = "index.html";
