@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
     console.log("PizzaLine - Sitio cargado correctamente 🍕");
 
@@ -6,3 +8,4 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Próximamente: carrito de compras 🛒");
     });
 });
+
