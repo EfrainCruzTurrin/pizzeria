@@ -1,17 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <nav>
-        <h2>Gestionar Roles</h2>
-        <a href="administracion.html"><button type="button">Volver</button></a>
+        <h2>Crear usuarios</h2>
+
+        <a href="/admin/gestionarRoles.html">
+            <button type="button">Volver</button>
+        </a>
     </nav>
 
+    <main>
+        <section>
+            <form id="form-agregar-usuario">
+
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+
+                <label for="rol">Rol</label>
+                <select id="rol" required>
+                    <option value="" disabled selected>Seleccionar rol...</option>
+                    <option value="ADMIN">ADMIN</option>
+                    <option value="ADMIN_PEDIDOS">Encargado de pedidos</option>
+                    <option value="DELIVERY">Delivery</option>
+                </select>
+
+                <label for="activo">
+                    Activo
+                    <input type="checkbox" id="activo" checked>
+                </label>
+
+                <button type="submit">Crear usuario</button>
+            </form>
+
+
+        </section>
+
+        <div id="mensaje"></div>
+    </main>
+
+
+    <script src="gestionarRoles.js"></script>
 
 
 </body>
+
 </html>
