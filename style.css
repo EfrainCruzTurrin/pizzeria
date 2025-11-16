@@ -1,19 +1,16 @@
 /* ===== main page ===== */
 
-* {
+/* Reset básico */
+html, body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
-}
-
-body {
     background-color: #fff8f0;
     color: #333;
 }
 
 /* ===== HEADER ===== */
-header {
+.headerPrincipal {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,24 +19,24 @@ header {
     padding: 10px 20px;
 }
 
-header .logo {
+.headerPrincipal .logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-header .logo img {
+.headerPrincipal .logo img {
     width: 50px;
     height: 50px;
 }
 
-nav ul {
+.navPrincipal ul {
     display: flex;
     list-style: none;
     gap: 15px;
 }
 
-nav ul li a {
+.navPrincipal ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -55,13 +52,14 @@ nav ul li a {
 }
 
 /* ===== MAIN ===== */
-main {
+.mainPrincipal {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
     padding: 20px;
 }
 
+/* Promociones */
 .promociones h2 {
     color: #d32f2f;
     margin-bottom: 10px;
@@ -89,17 +87,17 @@ main {
 }
 
 /* ===== ASIDE ===== */
-aside {
+.asidePrincipal {
     background-color: #f7f7f7;
     padding: 15px;
     border-radius: 10px;
 }
 
-aside section {
+.asidePrincipal section {
     margin-bottom: 20px;
 }
 
-aside h3 {
+.asidePrincipal h3 {
     color: #d32f2f;
     margin-bottom: 8px;
 }
@@ -125,7 +123,8 @@ aside h3 {
     margin: 0 auto;
 }
 
-.registro input, .registro button {
+.registro input,
+.registro button {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -140,7 +139,7 @@ aside h3 {
 }
 
 /* ===== FOOTER ===== */
-footer {
+.footerPrincipal {
     background-color: #d32f2f;
     color: white;
     text-align: center;
@@ -169,17 +168,18 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    main {
+    .mainPrincipal {
         grid-template-columns: 1fr;
     }
 
-    nav ul {
+    .navPrincipal ul {
         flex-direction: column;
         gap: 8px;
     }
 }
 
 /* ===== end of main page ===== */
+
 
 /* INICIO DE CARTA */
 /* Fondo general */
