@@ -428,3 +428,58 @@ body {
 
 /* --- end sucursales section --- */
 
+/* --- start carrito --- */
+.carrito-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #eee;
+  border-radius: 8px;
+}
+
+.carrito-controles {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.controles button {
+  padding: 5px 10px;
+}
+
+.eliminar {
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
+.btn-finalizar {
+  background: green;
+  color: white;
+  padding: 12px;
+  border: none;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 17px;
+}
+
+.btn-vaciar {
+  background: gray;
+  color: white;
+  padding: 12px;
+  border: none;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 17px;
+}
+/* --- end carrito --- */
