@@ -786,3 +786,43 @@ form div {
   color: #ffd700;
 }
 /* FIN INFO */
+
+/*BOTON PARA VOLVER*/
+#btnVolver {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #FFD700;
+  border: 3px solid #D2691E;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+}
+
+#btnVolver:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.pizzaIcono {
+  font-size: 28px;
+  margin-bottom: 2px;
+}
+
+.textoVolver {
+  font-size: 10px;
+  font-weight: bold;
+  color: #8B4513;
+  text-transform: uppercase;
+}
+/*FIN BOTON*/
