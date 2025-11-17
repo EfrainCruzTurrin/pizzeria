@@ -9,23 +9,35 @@ document.addEventListener("DOMContentLoaded", async () => {
   try {
     const respuesta = await fetch(urlApi);
     if (!respuesta.ok) throw new Error("Error al obtener el menú");
+
     const productos = await respuesta.json();
+
+    // Filtrar por disponibles
     productosCache = productos.filter(p => p.disponible === true);
+
+    // Render inicial
     renderProductos(productosCache, listaPizzas, listaBebidas);
   } catch (error) {
     console.error(error);
   }
 
-  // evento de búsqueda
-  inputSearch && inputSearch.addEventListener("input", (e) => {
-    const q = e.target.value.trim().toLowerCase();
-    if (!q) {
-      renderProductos(productosCache, listaPizzas, listaBebidas);
-    } else {
-      const filtrados = productosCache.filter(p => p.nombre.toLowerCase().includes(q));
+  // Evento de búsqueda en tiempo real
+  if (inputSearch) {
+    inputSearch.addEventListener("input", (e) => {
+      const q = e.target.value.trim().toLowerCase();
+
+      if (!q) {
+        renderProductos(productosCache, listaPizzas, listaBebidas);
+        return;
+      }
+
+      const filtrados = productosCache.filter(p =>
+        p.nombre.toLowerCase().includes(q)
+      );
+
       renderProductos(filtrados, listaPizzas, listaBebidas);
-    }
-  });
+    });
+  }
 });
 
 function renderProductos(productos, listaPizzas, listaBebidas) {
@@ -43,25 +55,41 @@ function renderProductos(productos, listaPizzas, listaBebidas) {
     pPrecio.classList.add("precio");
     pPrecio.textContent = `Precio: $${prod.precio}`;
 
-    // botón agregar 
+    // botón agregar al carrito
     const btn = document.createElement("button");
     btn.textContent = "Agregar al carrito";
-    btn.onclick = () => agregarAlCarrito(String(prod.id), prod.nombre, Number(prod.precio));
+
+    // Previene errores si no hay precio válido
+    btn.onclick = () => {
+      if (!prod.precio || isNaN(prod.precio)) {
+        alert("Este producto no tiene precio válido.");
+        return;
+      }
+
+      agregarAlCarrito(String(prod.id), prod.nombre, Number(prod.precio));
+    };
 
     li.appendChild(h3);
     li.appendChild(pPrecio);
     li.appendChild(btn);
 
-    if (prod.tipo.toLowerCase() === "pizza") listaPizzas.appendChild(li);
-    else listaBebidas.appendChild(li);
+    // Validación de tipo
+    const tipo = (prod.tipo || "").trim().toLowerCase();
+
+    if (tipo === "pizza") {
+      listaPizzas.appendChild(li);
+    } else if (tipo === "bebida" || tipo === "bebidas") {
+      listaBebidas.appendChild(li);
+    }
   });
 
-    // mensaje 
+  // Mensaje cuando no hay resultados
   if (listaPizzas.children.length === 0) {
     const li = document.createElement("li");
     li.textContent = "No hay pizzas disponibles por el momento.";
     listaPizzas.appendChild(li);
   }
+
   if (listaBebidas.children.length === 0) {
     const li = document.createElement("li");
     li.textContent = "No hay bebidas disponibles por el momento.";
