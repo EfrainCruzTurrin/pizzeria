@@ -1,5 +1,33 @@
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+/* ---------------- FUNCION MENSAJES ---------------- */
+function mostrarMensaje(texto, tipo = "info") {
+  const box = document.getElementById("msg-box");
+  if (!box) return;
+
+  let color = "#fff3cd";
+  let border = "#ffcc00";
+
+  if (tipo === "error") {
+    color = "#f8d7da";
+    border = "#d32f2f";
+  }
+
+  if (tipo === "ok") {
+    color = "#d4edda";
+    border = "#28a745";
+  }
+
+  box.style.display = "block";
+  box.style.background = color;
+  box.style.borderColor = border;
+  box.innerHTML = texto;
+
+  setTimeout(() => {
+    box.style.display = "none";
+  }, 3000);
+}
+
 /* ---------------- AGREGAR AL CARRITO ---------------- */
 function agregarAlCarrito(id, nombre, precio) {
   const existe = carrito.find(item => item.id === id);
@@ -57,7 +85,6 @@ function actualizarCarrito() {
   carrito.forEach(item => {
     cont.innerHTML += `
       <div class="carrito-item">
-
         <span>${item.nombre}</span>
         <span>$${item.precio}</span>
 
@@ -79,6 +106,7 @@ function actualizarCarrito() {
 function vaciarCarrito() {
   carrito = [];
   actualizarCarrito();
+  mostrarMensaje("Carrito vaciado", "ok");
 }
 
 /* ---------------- FINALIZAR PEDIDO ---------------- */
@@ -86,13 +114,13 @@ async function finalizarPedido() {
   const user = JSON.parse(localStorage.getItem("pizzaline_user"));
 
   if (!user) {
-    alert("Debes iniciar sesión para hacer un pedido.");
-    window.location.href = "login.html";
+    mostrarMensaje("Debes iniciar sesión para hacer un pedido.", "error");
+    setTimeout(() => window.location.href = "login.html", 1500);
     return;
   }
 
   if (carrito.length === 0) {
-    alert("El carrito está vacío.");
+    mostrarMensaje("El carrito está vacío.", "error");
     return;
   }
 
@@ -105,11 +133,11 @@ async function finalizarPedido() {
 
   try {
     const resultado = await enviarPedido(pedido);
-    alert("Pedido enviado con éxito!");
+    mostrarMensaje("Pedido enviado con éxito!", "ok");
     vaciarCarrito();
-    window.location.href = "index.html";
+    setTimeout(() => window.location.href = "index.html", 1500);
   } catch (e) {
-    alert("Hubo un error al enviar el pedido.");
+    mostrarMensaje("Hubo un error al enviar el pedido.", "error");
   }
 }
 
