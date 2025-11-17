@@ -1,5 +1,6 @@
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+/* ---------------- MENSAJES ---------------- */
 function mostrarMensaje(msg, tipo = "info") {
   const box = document.getElementById("msg-box");
   box.innerText = msg;
@@ -15,8 +16,11 @@ function mostrarMensaje(msg, tipo = "info") {
 function agregarAlCarrito(id, nombre, precio) {
   const existe = carrito.find(item => item.id === id);
 
-  if (existe) existe.cantidad++;
-  else carrito.push({ id, nombre, precio, cantidad: 1 });
+  if (existe) {
+    existe.cantidad++;
+  } else {
+    carrito.push({ id, nombre, precio, cantidad: 1 });
+  }
 
   actualizarCarrito();
 }
@@ -33,7 +37,6 @@ function cambiarCantidad(id, cambio) {
   if (!item) return;
 
   item.cantidad += cambio;
-
   if (item.cantidad <= 0) eliminarItem(id);
   else actualizarCarrito();
 }
@@ -55,7 +58,6 @@ function actualizarCarrito() {
   carrito.forEach(item => {
     cont.innerHTML += `
       <div class="carrito-item">
-
         <span>${item.nombre}</span>
         <span>$${item.precio}</span>
 
@@ -97,6 +99,8 @@ async function finalizarPedido() {
 
   const pedido = {
     userId: user.id,
+    usuario: user.username || user.email || "Cliente",
+    fecha: new Date().toISOString(),
     items: carrito,
     total: obtenerTotal(),
     estado: "pendiente"
@@ -110,9 +114,10 @@ async function finalizarPedido() {
 
     setTimeout(() => {
       window.location.href = "index.html";
-    }, 2000);
+    }, 1800);
 
   } catch (e) {
+    console.error(e);
     mostrarMensaje("Hubo un error al enviar el pedido", "error");
   }
 }
