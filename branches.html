@@ -9,33 +9,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- ===== HEADER ===== -->
+    <div class="headerPrincipal">
+        <div class="logo">
+            <img src="img/logo.png" alt="PizzaLine Logo">
+            <h1>PizzaLine</h1>
+        </div>
 
-<!-- HEADER PRINCIPAL -->
-<header>
-    <div class="logo">
-        <!-- Logo clickeable que redirige al index -->
-        <a href="../index.html"><img src="../img/logo.png" alt="PizzaLine Logo"></a>
-        <h1>PizzaLine</h1>
+        <!-- NAV -->
+        <div class="navPrincipal">
+            <ul>
+                <li><a href="info.html">Acerca de Nosotros</a></li>
+                <li><a href="carta.html">Carta</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="branches.html">Sucursales</a></li>
+            </ul>
+        </div>
+
+        <div class="login-btn">
+            <a href="login.html">Login</a>
+        </div>
     </div>
 
-    <!-- Navegación principal -->
-    <nav>
-        <ul>
-            <li><a href="acerca.html">Acerca de Nosotros</a></li>
-            <li><a href="carta.html">Carta</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-
-            <!-- Opción activa (estamos en Sucursales) -->
-            <li><a href="sucursales.html" class="active">Sucursales</a></li>
-        </ul>
-    </nav>
-
-    <!-- Botón de Login -->
-    <div class="login-btn">
-        <a href="login.html">Login</a>
-    </div>
-</header>
-<!-- FIN HEADER -->
 
 <main>
     <section class="sucursales">
@@ -68,11 +63,16 @@
     </section>
 </main>
 
-<!-- FOOTER GENERAL -->
-<footer>
-    <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
-</footer>
-<!-- FIN FOOTER -->
+<!-- ===== FOOTER ===== -->
+    <div class="footerPrincipal">
+        <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
+    </div>
+
+ <a href="index.html" id="btnVolver">
+    <span class="pizzaIcono">🍕</span>
+    <span class="textoVolver">Volver</span>
+  </a>
+
 
 </body>
 </html>
