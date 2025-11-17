@@ -1,31 +1,40 @@
+/* Se encarga del header, logout, login y botón flotante.
+   NO maneja restricciones de acceso (eso lo hace checkLogin.js) */
+
 document.addEventListener("DOMContentLoaded", () => {
   console.log("PizzaLine - Sitio cargado correctamente 🍕");
 
-  // botón flotante carrito → ahora abre carrito.html
+  // Botón flotante → ir al carrito
   const btn = document.getElementById("btn-flotante");
-  if (btn) btn.addEventListener("click", () => window.location.href = "carrito.html");
+  if (btn) {
+    btn.addEventListener("click", () => {
+      window.location.href = "carrito.html";
+    });
+  }
 
-  // actualizar área auth
   updateAuthArea();
 });
 
+/* ========= obtener usuario guardado ========= */
 function getStoredUser() {
   try {
     return JSON.parse(localStorage.getItem("pizzaline_user"));
-  } catch { 
-    return null; 
+  } catch {
+    return null;
   }
 }
 
+/* ========= actualizar header (Hola usuario / Login) ========= */
 function updateAuthArea() {
   const auth = document.getElementById("auth-area");
   const linkPedidos = document.getElementById("link-pedidos");
+
   if (!auth) return;
 
   const user = getStoredUser();
 
   if (user) {
-    // usuario logueado
+    /* Usuario logueado */
     auth.innerHTML = `
       <span class="user-name">Hola, ${user.nombre.split(" ")[0]}</span>
       <button id="logout-btn" class="small">Cerrar sesión</button>
@@ -35,12 +44,11 @@ function updateAuthArea() {
 
     document.getElementById("logout-btn").addEventListener("click", () => {
       localStorage.removeItem("pizzaline_user");
-      updateAuthArea();
       window.location.href = "index.html";
     });
 
   } else {
-    // usuario NO logueado
+    /* Usuario no logueado */
     auth.innerHTML = `<a href="login.html">Login</a>`;
     if (linkPedidos) linkPedidos.style.display = "none";
   }
