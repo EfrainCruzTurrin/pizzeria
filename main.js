@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // botón flotante carrito
   const btn = document.getElementById("btn-flotante");
-  if (btn) btn.addEventListener("click", () => window.location.href = "pedidos.html");
+  if (btn) btn.addEventListener("click", () => window.location.href = "carrito.html");
 
   // actualizar area auth
   updateAuthArea();
