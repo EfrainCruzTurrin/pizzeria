@@ -33,48 +33,49 @@
         </a>
     </div>
 
+    <!-- LOGIN CHECK -->
     <script src="js/checkLogin.js"></script>
     <!-- ==================== FIN AVISO ==================== -->
 
-    <!-- ===== HEADER ===== -->
-    <div class="headerPrincipal" 
-        style="display:flex; 
-            justify-content:space-between; 
-            align-items:center; 
-            padding:10px 20px;">
 
-    <!-- LOGO -->
-    <div class="logo" style="display:flex; align-items:center; gap:10px;">
-        <img src="images/LogoTipoPizzaLine.png" 
-            alt="PizzaLine Logo" 
-            style="width:300px; height:150px; border-radius:8px;">
+    <!-- ==================== HEADER ==================== -->
+    <div class="headerPrincipal"
+         style="display:flex; justify-content:space-between; align-items:center; padding:10px 20px;">
+
+        <!-- LOGO -->
+        <div class="logo" style="display:flex; align-items:center; gap:10px;">
+            <img src="images/LogoTipoPizzaLine.png" 
+                 alt="PizzaLine Logo" 
+                 style="width:300px; height:150px; border-radius:8px;">
         </div>
 
-    <!-- NAV CENTRADO -->
-    <div class="navPrincipal" 
-            style="flex:1; display:flex; justify-content:center;">
-        <ul style="display:flex; gap:25px; list-style:none;">
-            <li><a href="info.html">Acerca de Nosotros</a></li>
-            <li><a href="carta.html">Carta</a></li>
-            <li><a href="branches.html">Sucursales</a></li>
-        </ul>
-    </div>
-
-    <!-- LOGIN + AUTH AREA (A LA DERECHA) -->
-    <div style="display:flex; align-items:center; gap:15px;">
-
-        <div class="login-btn">
-            <a href="login.html">Login</a>
+        <!-- NAV -->
+        <div class="navPrincipal" style="flex:1; display:flex; justify-content:center;">
+            <ul style="display:flex; gap:25px; list-style:none;">
+                <li><a href="info.html">Acerca de Nosotros</a></li>
+                <li><a href="carta.html">Carta</a></li>
+                <li><a href="branches.html">Sucursales</a></li>
+            </ul>
         </div>
 
-        <!-- Hola usuario / cerrar sesión -->
-        <div id="auth-area"></div>
+        <!-- LOGIN + USER AREA -->
+        <div style="display:flex; align-items:center; gap:15px;">
+
+            <div class="login-btn">
+                <a href="login.html">Login</a>
+            </div>
+
+            <!-- Aquí aparece “Hola, usuario / Cerrar sesión” -->
+            <div id="auth-area"></div>
 
         </div>
     </div>
 
-    <!-- ===== MAIN ===== -->
+
+    <!-- ==================== MAIN ==================== -->
     <div class="mainPrincipal">
+
+        <!-- PROMOCIONES -->
         <section class="promociones">
             <h2>Promociones y Combos</h2>
             <div class="promos">
@@ -83,6 +84,7 @@
                     <h3>2x1 en Muzza</h3>
                     <p>Todos los martes y jueves</p>
                 </div>
+
                 <div class="promo-card">
                     <img src="images/4399634f1a15-2-slice-pizza-gaseosa-400ml.png" alt="Promo 2">
                     <h3>Combo Familiar</h3>
@@ -91,8 +93,9 @@
             </div>
         </section>
 
-        <!-- ===== ASIDE ===== -->
+        <!-- ASIDE -->
         <div class="asidePrincipal">
+
             <section class="recomendaciones">
                 <h3>🍕 Recomendaciones</h3>
                 <ul>
@@ -122,7 +125,8 @@
         </div>
     </div>
 
-    <!-- ===== CONTACTO, REDES Y MAPA ===== -->
+
+    <!-- ==================== CONTACTO / REDES ==================== -->
     <section class="contacto-rapido" style="padding:30px; background:#fafafa; text-align:center;">
         <h3>Encuéntranos</h3>
 
@@ -143,27 +147,24 @@
         </div>
 
         <h4>Ubicación</h4>
-
         <div class="ubicacion" style="display:flex; align-items:center; gap:10px;">
             <img src="images/ubicacion.png"
-            height="250" style="width:3000px; border:0; border-radius:10px;" allowfullscreen="" loading="lazy">
+                 height="250"
+                 style="width:3000px; border:0; border-radius:10px;" loading="lazy">
         </div>
-
-        <!--<iframe src="https://maps.app.goo.gl/Ygw2F8hXBtKxsN7e6" width="100%"
-            height="250" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy">
-        </iframe>-->
     </section>
 
-    <!-- ===== RESEÑAS ===== -->
+
+    <!-- ==================== RESEÑAS ==================== -->
     <section id="reseñas" style="padding: 40px; background:#fff8f0;">
         <h3 style="text-align:center; color:#d32f2f; font-size:28px;">Reseñas de clientes</h3>
 
         <form id="form-review"
-            style="max-width:600px; margin:20px auto; display:flex; flex-direction:column; gap:10px;">
+              style="max-width:600px; margin:20px auto; display:flex; flex-direction:column; gap:10px;">
             <input id="review-name" placeholder="Tu nombre" required
-                style="padding:10px; border-radius:6px; border:1px solid #ccc;" />
+                   style="padding:10px; border-radius:6px; border:1px solid #ccc;" />
             <textarea id="review-text" placeholder="Tu reseña" required
-                style="padding:10px; height:100px; border-radius:6px; border:1px solid #ccc;"></textarea>
+                      style="padding:10px; height:100px; border-radius:6px; border:1px solid #ccc;"></textarea>
 
             <select id="review-rating" style="padding:10px; border-radius:6px; border:1px solid #ccc;">
                 <option value="5">5 ⭐</option>
@@ -173,20 +174,22 @@
                 <option value="1">1 ⭐</option>
             </select>
 
-            <button
-                style="padding:12px; background:#d32f2f; color:white; border:none; border-radius:6px; cursor:pointer;">Enviar
-                reseña</button>
+            <button style="padding:12px; background:#d32f2f; color:white; border:none; border-radius:6px; cursor:pointer;">
+                Enviar reseña
+            </button>
         </form>
 
         <div id="reviews-list" style="max-width:700px; margin:20px auto;"></div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+
+    <!-- ==================== FOOTER ==================== -->
     <div class="footerPrincipal">
         <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
     </div>
 
-    <!-- ===== BOTÓN FLOTANTE (CARRITO) ===== -->
+
+    <!-- ==================== BOTÓN FLOTANTE CARRITO ==================== -->
     <button id="btn-flotante">🛒</button>
 
     <script src="js/main.js"></script>
