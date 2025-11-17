@@ -3,20 +3,30 @@ const ORDERS_URL = `${API_BASE}/orders`;
 
 /* ------------ Obtener datos de MockAPI ------------ */
 async function obtenerDatosPedidos() {
-  const res = await fetch(ORDERS_URL);
-  const pedidos = await res.json();
+  try {
+    const res = await fetch(ORDERS_URL);
+    if (!res.ok) throw new Error("No se pudieron obtener los pedidos");
 
-  let pendientes = 0;
-  let preparando = 0;
-  let entregados = 0;
+    const pedidos = await res.json();
 
-  pedidos.forEach(p => {
-    if (p.estado === "pendiente") pendientes++;
-    if (p.estado === "en preparación") preparando++;
-    if (p.estado === "entregado") entregados++;
-  });
+    let pendientes = 0;
+    let preparando = 0;
+    let entregados = 0;
 
-  return { pendientes, preparando, entregados };
+    pedidos.forEach(p => {
+      const estado = p.estado.toLowerCase(); // ← normalizamos
+
+      if (estado.includes("pendiente")) pendientes++;
+      if (estado.includes("prepar")) preparando++; // cubre "en preparación"
+      if (estado.includes("entregado")) entregados++;
+    });
+
+    return { pendientes, preparando, entregados };
+
+  } catch (error) {
+    console.error("Error obteniendo pedidos:", error);
+    return { pendientes: 0, preparando: 0, entregados: 0 };
+  }
 }
 
 /* ------------ Renderizar gráfico ------------ */
