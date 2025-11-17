@@ -6,7 +6,6 @@ document.getElementById('formulario').addEventListener('submit', async (e) => {
 
 const userData = {
     nombre: document.getElementById('nombre').value,
-    apellido: document.getElementById('apellido').value,
     telefono: document.getElementById('telefono').value,
     email: document.getElementById('email').value,
     password: document.getElementById('password').value,
