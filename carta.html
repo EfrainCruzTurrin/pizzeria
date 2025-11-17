@@ -11,20 +11,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
- 
 </head>
+
 <body id="bodyCarta">
   
   <a href="index.html" id="btnVolver">
     <span class="pizzaIcono">🍕</span>
     <span class="textoVolver">Volver</span>
-</a>
+  </a>
 
-  <nav>
-   
-  </nav>
+  <nav></nav>
 
   <h1 id="tituloCarta"><strong>MENÚ PIZZALINE</strong></h1>
+
+  <!-- BARREA DE BÚSQUEDA (AGREGADA AQUÍ) -->
+  <div class="busqueda-wrap" style="text-align:center; margin-top:20px;">
+    <input id="search-input" 
+           type="search" 
+           placeholder="Buscar pizza por nombre..." 
+           style="padding:10px; width:60%; border-radius:8px; border:1px solid #ccc; font-size:16px;">
+  </div>
+  <!-- FIN BUSQUEDA -->
+
 
   <div id="containerCarta">
     <main>
@@ -35,21 +43,15 @@
           <h2>Pizzas</h2>
           <img src="images/pizza.png" width="120px" alt="icono de pizza" id="iconPizza">
 
-          <!-- Contenedor donde JS va a cargar TODAS las pizzas -->
-          <ul id="lista-pizzas" class="listaPizzas">
-           
-          </ul>
+          <ul id="lista-pizzas" class="listaPizzas"></ul>
         </section>
 
         <!-- SECCIÓN BEBIDAS -->
         <section id="seccion-bebidas">
           <h2>Bebidas</h2>
-          <img src="images/bebidas.png" alt="icono bebidas" width="120px" id="iconBebidas">
-
-          <!-- Contenedor donde JS va a cargar TODAS las bebidas -->
-          <ul id="lista-bebidas" class="listaBebidas">
-           
-          </ul>
+          <img src="images/bebidas.png" width="120px" alt="icono bebidas" id="iconBebidas">
+    <!-- Contenedor donde JS va a cargar TODAS las bebidas -->
+          <ul id="lista-bebidas" class="listaBebidas"></ul>
         </section>
 
       </div>
@@ -60,6 +62,6 @@
     © 2025 Pizzaline — Todos los derechos reservados.
   </footer>
 
- <script src="carta.js"></script>
+  <script src="carta.js"></script>
 </body>
 </html>
