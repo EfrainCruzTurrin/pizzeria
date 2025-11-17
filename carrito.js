@@ -12,20 +12,17 @@ function mostrarMensaje(msg, tipo = "info") {
   setTimeout(() => box.style.display = "none", 3000);
 }
 
-/* ---------------- AGREGAR AL CARRITO ---------------- */
+/* ---------------- AGREGAR ---------------- */
 function agregarAlCarrito(id, nombre, precio) {
   const existe = carrito.find(item => item.id === id);
 
-  if (existe) {
-    existe.cantidad++;
-  } else {
-    carrito.push({ id, nombre, precio, cantidad: 1 });
-  }
+  if (existe) existe.cantidad++;
+  else carrito.push({ id, nombre, precio, cantidad: 1 });
 
   actualizarCarrito();
 }
 
-/* ---------------- ELIMINAR ITEM ---------------- */
+/* ---------------- ELIMINAR ---------------- */
 function eliminarItem(id) {
   carrito = carrito.filter(item => item.id !== id);
   actualizarCarrito();
@@ -41,7 +38,7 @@ function cambiarCantidad(id, cambio) {
   else actualizarCarrito();
 }
 
-/* ---------------- CALCULAR TOTAL ---------------- */
+/* ---------------- TOTAL ---------------- */
 function obtenerTotal() {
   return carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
 }
@@ -88,7 +85,7 @@ async function finalizarPedido() {
 
   if (!user) {
     mostrarMensaje("Debes iniciar sesión para hacer un pedido", "error");
-    setTimeout(() => window.location.href = "login.html", 1500);
+    setTimeout(() => window.location.href = "login.html", 1300);
     return;
   }
 
@@ -99,7 +96,7 @@ async function finalizarPedido() {
 
   const pedido = {
     userId: user.id,
-    usuario: user.username || user.email || "Cliente",
+    usuario: user.nombre,
     fecha: new Date().toISOString(),
     items: carrito,
     total: obtenerTotal(),
@@ -114,7 +111,7 @@ async function finalizarPedido() {
 
     setTimeout(() => {
       window.location.href = "index.html";
-    }, 1800);
+    }, 1500);
 
   } catch (e) {
     console.error(e);
