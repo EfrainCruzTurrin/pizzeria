@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito - PizzaLine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== AVISO LOGIN ==================== -->
+  <div id="login-warning" 
+       style="display:none;
+              padding:20px;
+              background:#ffe5e5;
+              border:2px solid #d32f2f;
+              color:#b71c1c;
+              font-weight:bold;
+              text-align:center;
+              margin:20px;
+              border-radius:10px;">
+      ⚠ Necesitas iniciar sesión para continuar  
+      <br><br>
+      <a href="login.html" 
+         style="background:#d32f2f;
+                color:white;
+                padding:10px 20px;
+                border-radius:6px;
+                text-decoration:none;">
+          Ir al login
+      </a>
+  </div>
+
+  <!-- Caja de mensajes -->
+  <div id="msg-box"
+       style="display:none; padding:15px;
+              margin:20px; text-align:center;
+              background:#fff3cd; border:1px solid #ffcc00;
+              border-radius:10px; font-weight:bold;">
+  </div>
+
+  <script src="js/checkLogin.js"></script>
+  <!-- ==================== FIN AVISO ==================== -->
+
+  <h1>Tu Carrito</h1>
+
+  <div id="carrito-container" class="carrito-lista"></div>
+
+  <h2 id="carrito-total">Total: $0</h2>
+
+  <button onclick="vaciarCarrito()" class="btn-vaciar">Vaciar carrito</button>
+  <button onclick="finalizarPedido()" class="btn-finalizar">Finalizar pedido</button>
+
+  <script src="orders.js"></script>
+  <script src="carrito.js"></script>
+</body>
+</html>
