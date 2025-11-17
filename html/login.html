@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzaLine - Iniciar Sesión</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER LOGIN ===== -->
+    <div class="headerLogin">
+        <h2>PizzaLine</h2>
+    </div>
+
+    <!-- ===== FORM LOGIN ===== -->
+    <section class="registro">
+        <h2>Iniciar Sesión</h2>
+
+        <!-- Lugar donde mostraremos los mensajes -->
+        <p id="login-msg" style="text-align:center; font-weight:bold;"></p>
+
+        <form id="loginForm">
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">Ingresar</button>
+        </form>
+
+        <p>¿No tenés cuenta? <a href="registroUsuario.html">Registrate acá</a></p>
+    </section>
+
+    <!-- ===== FOOTER LOGIN ===== -->
+    <div class="footerLogin">
+        <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
+    </div>
+
+    <!-- ===== SCRIPT LOGIN ===== -->
+    <script>
+    const URL_USERS = "https://690b50956ad3beba00f46174.mockapi.io/api/users";
+
+    const msg = document.getElementById("login-msg");
+
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const email = e.target[0].value.trim();
+      const password = e.target[1].value;
+
+      msg.textContent = "Verificando...";
+      msg.style.color = "blue";
+
+      try {
+        const res = await fetch(`${URL_USERS}?email=${encodeURIComponent(email)}`);
+        const arr = await res.json();
+
+        if (!arr.length) {
+          msg.textContent = "❌ Usuario no encontrado";
+          msg.style.color = "red";
+          return;
+        }
+
+        const user = arr[0];
+
+        if (user.password !== password) {
+          msg.textContent = "❌ Contraseña incorrecta";
+          msg.style.color = "red";
+          return;
+        }
+
+        // Guardamos sesión
+        localStorage.setItem("pizzaline_user", JSON.stringify(user));
+
+        msg.textContent = `✔ Bienvenido ${user.nombre}! Redirigiendo...`;
+        msg.style.color = "green";
+
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 1000);
+
+      } catch (err) {
+        msg.textContent = "⚠ Error de conexión con el servidor";
+        msg.style.color = "red";
+      }
+    });
+    </script>
+
+</body>
+</html>
+
