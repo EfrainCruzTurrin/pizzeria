@@ -1,19 +1,24 @@
-// Lee usuario desde el localStorage
+// Verificar usuario logueado
 const user = JSON.parse(localStorage.getItem("pizzaline_user"));
-const warningBox = document.getElementById("login-warning");
 
-// Si NO hay usuario 
+// Ocultar botón Login si hay usuario
+const loginBtn = document.querySelector(".login-btn");
+if (loginBtn && user) {
+    loginBtn.style.display = "none";
+}
+
+// Verificar acceso a páginas que requieren login (carrito / pedidos)
+const loginWarning = document.getElementById("login-warning");
+
 if (!user) {
-    if (warningBox) warningBox.style.display = "block";
+    if (loginWarning) {
+        loginWarning.style.display = "block";
+    }
 
-    // Oculta el contenido verdadero de la página
-    const mainContent = document.querySelector("main, .mainPrincipal, #containerCarta, #bodyInfo");
-    if (mainContent) mainContent.style.display = "none";
-
-} else {
-    // Si HAY usuario 
-    if (warningBox) warningBox.style.display = "none";
-
-    const mainContent = document.querySelector("main, .mainPrincipal, #containerCarta, #bodyInfo");
-    if (mainContent) mainContent.style.display = "block";
+    // Bloquear botones de pedido
+    const finalizar = document.querySelector(".btn-finalizar");
+    if (finalizar) {
+        finalizar.disabled = true;
+        finalizar.style.opacity = "0.4";
+    }
 }
