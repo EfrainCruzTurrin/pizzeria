@@ -37,27 +37,41 @@
     <!-- ==================== FIN AVISO ==================== -->
 
     <!-- ===== HEADER ===== -->
-    <div class="headerPrincipal">
-        <div class="logo">
-            <img src="images/Pizza-Logo-Design-Graphics-29132095-1.jpg" alt="PizzaLine Logo">
-            <h1>PizzaLine</h1>
+    <div class="headerPrincipal" 
+        style="display:flex; 
+            justify-content:space-between; 
+            align-items:center; 
+            padding:10px 20px;">
+
+    <!-- LOGO -->
+    <div class="logo" style="display:flex; align-items:center; gap:10px;">
+        <img src="images/Pizza-Logo-Design-Graphics-29132095-1.jpg" 
+            alt="PizzaLine Logo" 
+            style="width:60px; height:60px; border-radius:8px;">
+        <h1>PizzaLine</h1>
         </div>
 
-        <!-- NAV -->
-        <div class="navPrincipal">
-            <ul>
-                <li><a href="info.html">Acerca de Nosotros</a></li>
-                <li><a href="carta.html">Carta</a></li>
-                <li><a href="branches.html">Sucursales</a></li>
-            </ul>
-        </div>
+    <!-- NAV CENTRADO -->
+    <div class="navPrincipal" 
+            style="flex:1; display:flex; justify-content:center;">
+        <ul style="display:flex; gap:25px; list-style:none;">
+            <li><a href="info.html">Acerca de Nosotros</a></li>
+            <li><a href="carta.html">Carta</a></li>
+            <li><a href="branches.html">Sucursales</a></li>
+        </ul>
+    </div>
+
+    <!-- LOGIN + AUTH AREA (A LA DERECHA) -->
+    <div style="display:flex; align-items:center; gap:15px;">
 
         <div class="login-btn">
             <a href="login.html">Login</a>
         </div>
 
-        <!-- Área donde aparecerá "Hola, usuario" o "Cerrar sesión" -->
-        <div id="auth-area" style="margin-left:15px;"></div>
+        <!-- Hola usuario / cerrar sesión -->
+        <div id="auth-area"></div>
+
+        </div>
     </div>
 
     <!-- ===== MAIN ===== -->
