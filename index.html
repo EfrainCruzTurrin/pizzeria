@@ -10,8 +10,8 @@
 
 <body>
 
-    <!-- ==================== AVISO LOGIN (AQUÍ VA) ==================== -->
-  <div id="login-warning" 
+    <!-- ==================== AVISO LOGIN ==================== -->
+    <div id="login-warning" 
        style="display:none;
               padding:20px;
               background:#ffe5e5;
@@ -21,19 +21,19 @@
               text-align:center;
               margin:20px;
               border-radius:10px;">
-      ⚠ Necesitas iniciar sesión para continuar  
-      <br><br>
-      <a href="login.html" 
-         style="background:#d32f2f;
-                color:white;
-                padding:10px 20px;
-                border-radius:6px;
-                text-decoration:none;">
-          Ir al login
-      </a>
-  </div>
+        ⚠ Necesitas iniciar sesión para continuar  
+        <br><br>
+        <a href="login.html" 
+           style="background:#d32f2f;
+                  color:white;
+                  padding:10px 20px;
+                  border-radius:6px;
+                  text-decoration:none;">
+            Ir al login
+        </a>
+    </div>
 
-  <script src="js/checkLogin.js"></script>
+    <script src="js/checkLogin.js"></script>
     <!-- ==================== FIN AVISO ==================== -->
 
     <!-- ===== HEADER ===== -->
@@ -55,6 +55,9 @@
         <div class="login-btn">
             <a href="login.html">Login</a>
         </div>
+
+        <!-- Área donde aparecerá "Hola, usuario" o "Cerrar sesión" -->
+        <div id="auth-area" style="margin-left:15px;"></div>
     </div>
 
     <!-- ===== MAIN ===== -->
@@ -106,7 +109,7 @@
         </div>
     </div>
 
-    <!-- ===== CONTACTO, REDES Y MAPA (AGREGADO AQUÍ) ===== -->
+    <!-- ===== CONTACTO, REDES Y MAPA ===== -->
     <section class="contacto-rapido" style="padding:30px; background:#fafafa; text-align:center;">
         <h3>Encuéntranos</h3>
 
@@ -132,9 +135,8 @@
             height="250" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy">
         </iframe>
     </section>
-    <!-- ===== FIN CONTACTO ===== -->
 
-    <!-- ===== ⭐ RESEÑAS ===== -->
+    <!-- ===== RESEÑAS ===== -->
     <section id="reseñas" style="padding: 40px; background:#fff8f0;">
         <h3 style="text-align:center; color:#d32f2f; font-size:28px;">Reseñas de clientes</h3>
 
@@ -166,10 +168,9 @@
         <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
     </div>
 
-    <!-- ===== BOTÓN FLOTANTE ===== -->
+    <!-- ===== BOTÓN FLOTANTE (CARRITO) ===== -->
     <button id="btn-flotante">🛒</button>
 
     <script src="js/main.js"></script>
 </body>
-
 </html>
