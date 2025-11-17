@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" id="infoTodo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre nosotros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="bodyInfo">
+
+    <!-- ==================== AVISO LOGIN (AQUÍ VA) ==================== -->
+  <div id="login-warning" 
+       style="display:none;
+              padding:20px;
+              background:#ffe5e5;
+              border:2px solid #d32f2f;
+              color:#b71c1c;
+              font-weight:bold;
+              text-align:center;
+              margin:20px;
+              border-radius:10px;">
+      ⚠ Necesitas iniciar sesión para continuar  
+      <br><br>
+      <a href="login.html" 
+         style="background:#d32f2f;
+                color:white;
+                padding:10px 20px;
+                border-radius:6px;
+                text-decoration:none;">
+          Ir al login
+      </a>
+  </div>
+  <script src="js/checkLogin.js"></script>
+  <!-- ==================== FIN AVISO ==================== -->
+
+    <!-- ===== HEADER ===== -->
+    <div class="headerPrincipal">
+        <div class="logo">
+            <img src="images/Pizza-Logo-Design-Graphics-29132095-1.jpg" alt="PizzaLine Logo">
+            <h1>PizzaLine</h1>
+        </div>
+
+        <!-- NAV -->
+        <div class="navPrincipal">
+            <ul>
+                <li><a href="info.html">Acerca de Nosotros</a></li>
+                <li><a href="carta.html">Carta</a></li>
+                <li><a href="branches.html">Sucursales</a></li>
+            </ul>
+        </div>
+
+        <div class="login-btn">
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+
+    <a href="index.html" id="btnVolver">
+        <span class="pizzaIcono">🍕</span>
+        <span class="textoVolver">Volver</span>
+    </a>
+
+    <header id="headerInfo">
+        <h1 id="h1Info">pizzaLine</h1>
+        <nav id="navInfo">
+            <a href="#inicio" class="aInfo">Inicio</a>
+            <a href="#historia" class="aInfo">Sobre nosotros</a>
+            <a href="#contacto" class="aInfo">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="sectionInfo" id="inicio">
+        <h2 class="h2SectionInfo">Bienvenidos</h2>
+        <img class="imgSectionInfo" src="images/Pizza-Logo-Design-Graphics-29132095-1.jpg" alt="LOGO DE LA PIZZERIA">
+        <p class="pSectionInfo">
+            En PizzaLine, hacemos pizza artesanal con el corazón puesto en cada masa. Somos una pizzería familiar que combina la auténtica tradición napolitana con la calidez de Villa María.
+            Ingredientes frescos, masa fermentada 48 horas, horno a leña y recetas que han pasado la prueba del tiempo. Sin secretos, solo trabajo honesto y pasión por lo que hacemos.
+            PizzaLine - Desde 1998 en Villa María
+        </p>
+    </section>
+
+    <section class="sectionInfo" id="historia">
+        <h2 class="h2SectionInfo">Sobre nosotros: </h2>
+
+        <h3 class="h3SectionInfo">Origen</h3>
+        <img class="imgSectionInfo" src="images/pizzeria antigua.jpeg" alt="FOTO ANTIGUA DE LA PIZZERIA" width="450px">
+        <p class="pSectionInfo">
+            En 1985, el abuelo Giuseppe tenía una pequeña pizzería en Nápoles...
+        </p>
+
+        <hr>
+
+        <h3 class="h3SectionInfo">Primeros años</h3>
+        <p class="pSectionInfo">
+            1998: un local pequeño con cuatro mesas...
+        </p>
+        <blockquote>
+            <p><i>"La pizza y el código tienen algo en común: puedes copiar la receta, pero sin dedicación, nunca será lo mismo." - Marco, fundador de PizzaLine</i></p>
+        </blockquote>
+
+        <hr>
+
+        <h3 class="h3SectionInfo">Crecimiento y Evolucion</h3>
+        <ul>
+            <li>2008: Ampliación del local.</li>
+            <li>2012: Delivery renovado.</li>
+            <li>2015: Sistema de pedidos online.</li>
+            <li>2020: Pandemia.</li>
+            <li>Hoy: Dos locales en la ciudad.</li>
+        </ul>
+
+        <hr>
+
+        <h3 class="h3SectionInfo">Actualidad</h3>
+        <img class="imgSectionInfo" src="images/actualidad.jpg" alt="PIZZERIA EN LA ACTUALIDAD" width="500px">
+        <p class="pSectionInfo">
+            PizzaLine hoy es una pizzería consolidada en Villa María...
+        </p>
+    </section>
+
+    <section class="sectionInfo" id="contacto">
+        <h2 class="h2SectionInfo">Contacto</h2>
+        <p class="pSectionInfo"><strong>DIRECCION: </strong>Av. Fake 1404, Villa María, Córdoba</p>
+        <p class="pSectionInfo"><strong>TELEFONO: </strong>(0353) 452-7788</p>
+        <p class="pSectionInfo"><strong>EMAIL: </strong>pizzaline@gmail.com</p>
+
+        <h3 class="h3SectionInfo">Horarios</h3>
+        <p class="pSectionInfo">Lunes a viernes: 19:00 - 00:00 hs</p>
+        <p class="pSectionInfo">Sabados y Domingos: 12:00 - 15:00 / 19:00 - 01:00 hs</p>
+    </section>
+
+    <!-- ========== BOTÓN IR ARRIBA (AGREGADO) ========== -->
+    <button id="btnTop" title="Ir arriba">↑</button>
+
+    <script>
+        const btnTop = document.getElementById('btnTop');
+        btnTop.style = "position:fixed;right:20px;bottom:40px;width:50px;height:50px;font-size:20px;border-radius:50%;background:#FFD700;border:none;cursor:pointer;z-index:9999;";
+        btnTop.addEventListener('click', () => 
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+        );
+    </script>
+    <!-- ========== FIN BOTÓN ========== -->
+
+    <!-- ===== FOOTER ===== -->
+    <div class="footerPrincipal">
+        <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
+    </div>
+</body>
+</html>
