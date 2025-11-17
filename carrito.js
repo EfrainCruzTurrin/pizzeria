@@ -1,47 +1,22 @@
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-/* ---------------- FUNCION MENSAJES ---------------- */
-function mostrarMensaje(texto, tipo = "info") {
+function mostrarMensaje(msg, tipo = "info") {
   const box = document.getElementById("msg-box");
-  if (!box) return;
+  box.innerText = msg;
 
-  let color = "#fff3cd";
-  let border = "#ffcc00";
-
-  if (tipo === "error") {
-    color = "#f8d7da";
-    border = "#d32f2f";
-  }
-
-  if (tipo === "ok") {
-    color = "#d4edda";
-    border = "#28a745";
-  }
-
+  box.style.background = tipo === "error" ? "#ffdddd" : "#fff3cd";
+  box.style.border = tipo === "error" ? "1px solid #d9534f" : "1px solid #ffcc00";
   box.style.display = "block";
-  box.style.background = color;
-  box.style.borderColor = border;
-  box.innerHTML = texto;
 
-  setTimeout(() => {
-    box.style.display = "none";
-  }, 3000);
+  setTimeout(() => box.style.display = "none", 3000);
 }
 
 /* ---------------- AGREGAR AL CARRITO ---------------- */
 function agregarAlCarrito(id, nombre, precio) {
   const existe = carrito.find(item => item.id === id);
 
-  if (existe) {
-    existe.cantidad++;
-  } else {
-    carrito.push({
-      id,
-      nombre,
-      precio,
-      cantidad: 1
-    });
-  }
+  if (existe) existe.cantidad++;
+  else carrito.push({ id, nombre, precio, cantidad: 1 });
 
   actualizarCarrito();
 }
@@ -59,11 +34,8 @@ function cambiarCantidad(id, cambio) {
 
   item.cantidad += cambio;
 
-  if (item.cantidad <= 0) {
-    eliminarItem(id);
-  } else {
-    actualizarCarrito();
-  }
+  if (item.cantidad <= 0) eliminarItem(id);
+  else actualizarCarrito();
 }
 
 /* ---------------- CALCULAR TOTAL ---------------- */
@@ -78,13 +50,12 @@ function actualizarCarrito() {
   const cont = document.getElementById("carrito-container");
   const total = document.getElementById("carrito-total");
 
-  if (!cont || !total) return;
-
   cont.innerHTML = "";
 
   carrito.forEach(item => {
     cont.innerHTML += `
       <div class="carrito-item">
+
         <span>${item.nombre}</span>
         <span>$${item.precio}</span>
 
@@ -106,7 +77,7 @@ function actualizarCarrito() {
 function vaciarCarrito() {
   carrito = [];
   actualizarCarrito();
-  mostrarMensaje("Carrito vaciado", "ok");
+  mostrarMensaje("Carrito vaciado");
 }
 
 /* ---------------- FINALIZAR PEDIDO ---------------- */
@@ -114,13 +85,13 @@ async function finalizarPedido() {
   const user = JSON.parse(localStorage.getItem("pizzaline_user"));
 
   if (!user) {
-    mostrarMensaje("Debes iniciar sesión para hacer un pedido.", "error");
+    mostrarMensaje("Debes iniciar sesión para hacer un pedido", "error");
     setTimeout(() => window.location.href = "login.html", 1500);
     return;
   }
 
   if (carrito.length === 0) {
-    mostrarMensaje("El carrito está vacío.", "error");
+    mostrarMensaje("El carrito está vacío", "error");
     return;
   }
 
@@ -132,12 +103,17 @@ async function finalizarPedido() {
   };
 
   try {
-    const resultado = await enviarPedido(pedido);
-    mostrarMensaje("Pedido enviado con éxito!", "ok");
+    await enviarPedido(pedido);
+
+    mostrarMensaje("Pedido enviado con éxito!");
     vaciarCarrito();
-    setTimeout(() => window.location.href = "index.html", 1500);
+
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 2000);
+
   } catch (e) {
-    mostrarMensaje("Hubo un error al enviar el pedido.", "error");
+    mostrarMensaje("Hubo un error al enviar el pedido", "error");
   }
 }
 
