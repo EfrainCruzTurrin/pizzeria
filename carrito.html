@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Carrito - PizzaLine</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- ==================== AVISO LOGIN ==================== -->
@@ -41,7 +43,7 @@
   <script src="js/checkLogin.js"></script>
   <!-- ==================== FIN AVISO ==================== -->
 
-  <h1>Tu Carrito</h1>
+  <h1 style="text-align:center;">Tu Carrito</h1>
 
   <div id="carrito-container" class="carrito-lista"></div>
 
@@ -50,7 +52,9 @@
   <button onclick="vaciarCarrito()" class="btn-vaciar">Vaciar carrito</button>
   <button onclick="finalizarPedido()" class="btn-finalizar">Finalizar pedido</button>
 
+  <!-- IMPORTANTE: first orders.js, then carrito.js -->
   <script src="orders.js"></script>
   <script src="carrito.js"></script>
+
 </body>
 </html>
