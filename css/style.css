@@ -1,0 +1,798 @@
+/* ===== main page ===== */
+
+/* Reset básico */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+}
+
+/* ===== HEADER ===== */
+.headerPrincipal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d32f2f;
+    color: white;
+    padding: 10px 20px;
+}
+
+.headerPrincipal .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.headerPrincipal .logo img {
+    width: 150px;
+    height: 80px;
+}
+
+.navPrincipal ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin-left: -200px;
+}
+
+.navPrincipal ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-btn a {
+    background-color: #fff;
+    color: #d32f2f;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== MAIN ===== */
+.mainPrincipal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Promociones */
+.promociones h2 {
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+.promos {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.promo-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.promo-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* ===== ASIDE ===== */
+.asidePrincipal {
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.asidePrincipal section {
+    margin-bottom: 20px;
+}
+
+.asidePrincipal h3 {
+    color: #d32f2f;
+    margin-bottom: 8px;
+}
+
+.bancos img {
+    width: 150px;
+    margin: 5px;
+}
+
+/* ===== FOOTER ===== */
+.footerPrincipal {
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ===== BOTÓN FLOTANTE ===== */
+#btn-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#btn-flotante:hover {
+    background-color: #b71c1c;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .mainPrincipal {
+        grid-template-columns: 1fr;
+    }
+
+    .navPrincipal ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* ===== end of main page ===== */
+
+
+/* INICIO DE CARTA */
+/* Fondo general */
+#bodyCarta {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #dd1111f5;
+}
+
+/* Título */
+#tituloCarta {
+  text-align: center;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  color: hsl(64, 92%, 63%);
+  margin-top: 25px;
+  font-size: 38px;
+  letter-spacing: 2px;
+}
+
+/* Contenedor principal */
+#containerCarta {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Carta completa */
+.carta {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  max-width: 1000px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Cada seccion */
+.carta section {
+  width: 48%;
+  margin-bottom: 25px;
+}
+
+/* Títulos de sección */
+.carta section h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+/* Lista general */
+.listaPizzas,
+.listaBebidas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cada ítem */
+.listaPizzas li,
+.listaBebidas li {
+  background: #c4c1c249;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #e6d2c3;
+}
+
+/* Nombre del producto */
+.listaPizzas h3,
+.listaBebidas h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Descripción */
+.listaPizzas p,
+.listaBebidas p {
+  margin: 5px 0;
+  line-height: 1.4;
+}
+
+/* Precio */
+.precio {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1a8f1a;
+  margin-top: 10px;
+}
+
+/* Footer */
+#footerCarta {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background: #ffe8d1;
+  color: #333;
+}
+
+#iconPizza, #iconBebidas {
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+}
+/* FIN CARTA */
+
+/* ===== start login ===== */
+
+/* Reset general (igual al original) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #fff8f0;
+    color: #333;
+}
+
+/* ===== HEADER LOGIN (misma estética que header original) ===== */
+.headerLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d32f2f;
+    color: white;
+    padding: 15px 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ===== FORM LOGIN (misma estética que .registro original) ===== */
+.registro {
+    background-color: #ffe5e5;
+    text-align: center;
+    padding: 30px;
+    max-width: 400px;
+    margin: 40px auto;
+    border-radius: 10px;
+}
+
+.registro h2 {
+    color: #d32f2f;
+    margin-bottom: 15px;
+}
+
+.registro form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.registro input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
+
+.registro button {
+    background-color: #d32f2f;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.registro button:hover {
+    background-color: #b71c1c;
+}
+
+.registro a {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== FOOTER LOGIN (misma estética que footer original) ===== */
+.footerLogin {
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* ===== end login ===== */
+
+
+/* --- start sucursales section --- */
+
+/* Contenedor general */
+.sucursales {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.sucursales h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #d32f2f; /* rojo estilo PizzaLine */
+}
+
+/* Contenedor de tarjetas (usa mismo estilo que promos iniciales) */
+.promos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Tarjetas individuales */
+.promo-card {
+    background: #fff;
+    width: 280px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* misma sombra del css original */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover con efecto elegante */
+.promo-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.promo-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #c62828;
+}
+
+.promo-card p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* --- end sucursales section --- */
+
+/* --- start carrito --- */
+.carrito-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #eee;
+  border-radius: 8px;
+}
+
+.carrito-controles {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.controles button {
+  padding: 5px 10px;
+}
+
+.eliminar {
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
+.btn-finalizar {
+  background: green;
+  color: white;
+  padding: 12px;
+  border: none;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 17px;
+}
+
+.btn-vaciar {
+  background: gray;
+  color: white;
+  padding: 12px;
+  border: none;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 17px;
+}
+/* --- end carrito --- */
+
+
+
+/* INICIO REGISTRO */
+/* Fondo general */
+#bodyRegistro {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background: #c00707;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+/* Título principal */
+#h1Registro {
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #000000;
+  margin-bottom: 30px;
+  font-size: 36px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Contenedor del formulario */
+#formulario {
+  background: #ffffff;
+  padding: 35px 40px;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Cada campo */
+form div {
+  margin-bottom: 22px;
+}
+
+/* Etiquetas */
+.labelReg {
+  display: block;
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Inputs */
+#nombre,
+#apellido,
+#telefono,
+#email,
+#password {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  background: #f9f9f9;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Focus en inputs */
+#nombre:focus,
+#apellido:focus,
+#telefono:focus,
+#email:focus,
+#password:focus {
+  outline: none;
+  border-color: #f2fa01;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(17, 102, 221, 0.1);
+}
+
+/* Botón de envío */
+#botonReg {
+  width: 100%;
+  padding: 16px;
+  background: #dd1111;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+#botonReg:hover {
+  background: #ff0000;
+}
+
+/* FIN REGISTRO */
+/* INICIO INFO */
+#infoTodo {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#bodyInfo {
+  font-family: "Open Sans", sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* HEADER */
+#headerInfo {
+  background: #c41e1e;
+  padding: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#h1Info {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  color: #ffd700;
+  font-size: 48px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#navInfo {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.aInfo {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.aInfo:hover {
+  background: #ffffff;
+  color: #c41e1e;
+}
+
+/* SECCIONES */
+.sectionInfo {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 40px 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.h2SectionInfo {
+  font-family: "Bebas Neue", sans-serif;
+  color: #c41e1e;
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  border-bottom: 4px solid #ffd700;
+  padding-bottom: 10px;
+}
+
+.h3SectionInfo {
+  color: #c41e1e;
+  font-size: 28px;
+  margin: 25px 0 15px;
+  font-weight: 700;
+}
+
+.pSectionInfo {
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.imgSectionInfo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 25px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* INICIO */
+#inicio {
+  text-align: center;
+  background: linear-gradient(135deg, #fff 0%, #ffe8e8 100%);
+}
+
+#inicio img {
+  max-width: 300px;
+}
+
+#inicio p {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+}
+
+/* HISTORIA */
+#historia hr {
+  border: none;
+  border-top: 2px dashed #ffd700;
+  margin: 30px 0;
+}
+
+#historia blockquote {
+  background: #fff8dc;
+  border-left: 5px solid #c41e1e;
+  padding: 20px 25px;
+  margin: 25px 0;
+  font-style: italic;
+  border-radius: 8px;
+}
+
+#historia blockquote p {
+  color: #666;
+  text-align: left;
+}
+
+#historia ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#historia ul li {
+  background: #fff0f0;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border-left: 4px solid #c41e1e;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+#historia ul li::before {
+  content: "🍕 ";
+  margin-right: 10px;
+}
+
+/* GALERÍA */
+#galeria {
+  background: linear-gradient(135deg, #ffe8e8 0%, #fff 100%);
+}
+
+#galeria figure {
+  margin: 30px 0;
+  text-align: center;
+}
+
+#galeria figure img {
+  border: 5px solid #ffd700;
+}
+
+#galeria figcaption {
+  margin-top: 12px;
+  font-weight: 600;
+  color: #c41e1e;
+  font-size: 15px;
+}
+
+/* CONTACTO */
+#contacto {
+  background: #c41e1e;
+  color: #ffffff;
+}
+
+#contacto h2 {
+  color: #ffd700;
+  border-bottom-color: #ffffff;
+}
+
+#contacto h3 {
+  color: #ffd700;
+  margin-top: 30px;
+}
+
+#contacto p {
+  text-align: left;
+  font-size: 17px;
+  margin: 10px 0;
+}
+
+#contacto strong {
+  color: #ffd700;
+}
+/* FIN INFO */
+
+/*BOTON PARA VOLVER*/
+#btnVolver {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #FFD700;
+  border: 3px solid #D2691E;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+}
+
+#btnVolver:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.pizzaIcono {
+  font-size: 28px;
+  margin-bottom: 2px;
+}
+
+.textoVolver {
+  font-size: 10px;
+  font-weight: bold;
+  color: #8B4513;
+  text-transform: uppercase;
+}
+/*FIN BOTON*/
