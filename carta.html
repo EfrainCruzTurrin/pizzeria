@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,15 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Special+Gothic+Expanded+One&display=swap"
+    rel="stylesheet">
 </head>
 
 <body id="bodyCarta">
 
   <!-- ==================== AVISO LOGIN ==================== -->
-  <div id="login-warning"
-       style="display:none;
+  <div id="login-warning" style="display:none;
               padding:20px;
               background:#ffe5e5;
               border:2px solid #d32f2f;
@@ -23,16 +25,15 @@
               text-align:center;
               margin:20px;
               border-radius:10px;">
-      ⚠ Necesitas iniciar sesión para continuar  
-      <br><br>
-      <a href="login.html"
-         style="background:#d32f2f;
+    ⚠ Necesitas iniciar sesión para continuar
+    <br><br>
+    <a href="login.html" style="background:#d32f2f;
                 color:white;
                 padding:10px 20px;
                 border-radius:6px;
                 text-decoration:none;">
-          Ir al login
-      </a>
+      Ir al login
+    </a>
   </div>
 
   <script src="js/checkLogin.js"></script>
@@ -40,36 +41,35 @@
 
   <!-- ===== HEADER ===== -->
   <div class="headerPrincipal">
-      <div class="logo">
-          <img src="images/Pizza-Logo-Design-Graphics-29132095-1.jpg" alt="PizzaLine Logo">
-          <h1>PizzaLine</h1>
-      </div>
+    <div class="logo">
+      <img src="images/Pizza-Logo-Design-Graphics-29132095-1.jpg" alt="PizzaLine Logo">
+      <h1>PizzaLine</h1>
+    </div>
 
-      <!-- NAV -->
-      <div class="navPrincipal">
-          <ul>
-              <li><a href="info.html">Acerca de Nosotros</a></li>
-              <li><a href="carta.html">Carta</a></li>
-              <li><a href="branches.html">Sucursales</a></li>
-          </ul>
-      </div>
+    <!-- NAV -->
+    <div class="navPrincipal">
+      <ul>
+        <li><a href="info.html">Acerca de Nosotros</a></li>
+        <li><a href="carta.html">Carta</a></li>
+        <li><a href="branches.html">Sucursales</a></li>
+      </ul>
+    </div>
 
-      <div class="login-btn">
-          <a href="login.html">Login</a>
-      </div>
+    <div class="login-btn">
+      <a href="login.html">Login</a>
+    </div>
 
-      <!-- BOTÓN CARRITO -->
-      <div class="carrito-btn">
-        <a href="carrito.html" id="boton-carrito"
-           style="background:#ff9800;
+    <!-- BOTÓN CARRITO -->
+    <div class="carrito-btn">
+      <a href="carrito.html" id="boton-carrito" style="background:#ff9800;
                   color:white;
                   padding:10px 20px;
                   border-radius:6px;
                   text-decoration:none;
                   font-weight:bold;">
-          🛒 (0)
-        </a>
-      </div>
+        🛒 (0)
+      </a>
+    </div>
   </div>
 
   <a href="index.html" id="btnVolver">
@@ -81,10 +81,8 @@
 
   <!-- BUSCADOR -->
   <div class="busqueda-wrap" style="text-align:center; margin-top:20px;">
-    <input id="search-input"
-           type="search"
-           placeholder="Buscar pizza por nombre..."
-           style="padding:10px; width:60%; border-radius:8px; border:1px solid #ccc; font-size:16px;">
+    <input id="search-input" type="search" placeholder="Buscar pizza por nombre..."
+      style="padding:10px; width:60%; border-radius:8px; border:1px solid #ccc; font-size:16px;">
   </div>
 
   <div id="containerCarta">
@@ -105,6 +103,11 @@
           <ul id="lista-bebidas" class="listaBebidas"></ul>
         </section>
 
+        <section id="seccion-promos">
+          <h2>Promociones</h2>
+          <ul id="lista-promos" class="listaPromos"></ul>
+        </section>
+        
       </div>
     </main>
   </div>
@@ -113,8 +116,9 @@
 
   <!-- ===== FOOTER ===== -->
   <div class="footerPrincipal">
-      <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
+    <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
   </div>
 
 </body>
+
 </html>

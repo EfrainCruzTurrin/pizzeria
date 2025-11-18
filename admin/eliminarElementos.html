@@ -1,28 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Visibilidad de productos</title>
 </head>
+
 <body>
     <nav>
-        <h2>Visibilidad de productos</h2>
-        <a href="gestionarMenu.html"><button type="button">Volver</button></a>
+        <h1>Visibilidad de productos</h1>
+        <a href="gestionarMenu.html">
+            <button type="button">Volver</button>
+        </a>
     </nav>
 
-     <section>
-            <h3>Listado de Items</h3>
+    <main>
+        <!-- ============ ITEMS ============ -->
+        <section>
+            <h2>Items (Pizzas y Bebidas)</h2>
 
-            <div id="lista-items" class="lista-admin">
-                <!--
-                    CARDS DE ITEMS
-                -->
-            </div>
+            <h3>Items visibles</h3>
+            <div id="items-visibles"></div>
+
+            <h3>Items no visibles</h3>
+            <div id="items-no-visibles"></div>
         </section>
 
-        <!-- LOG -->
-        <div id="mensaje"></div>
-        <script src="eliminarElementos.js"></script>
+        <!-- ============ PROMOS ============ -->
+        <section>
+            <h2>Promociones</h2>
+
+            <h3>Promos visibles</h3>
+            <div id="promos-visibles"></div>
+
+            <h3>Promos no visibles</h3>
+            <div id="promos-no-visibles"></div>
+        </section>
+    </main>
+
+    <!-- LOG / MENSAJES -->
+    <div id="mensaje"></div>
+
+    <script src="eliminarElementos.js"></script>
 </body>
+
 </html>

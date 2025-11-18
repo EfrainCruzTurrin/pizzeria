@@ -58,3 +58,40 @@ function actualizarBotonFlotante() {
     window.location.href = "carrito.html";
   });
 }
+
+// carga de promociones
+
+const URL_PROMOS = "https://691c6c133aaeed735c90c5f7.mockapi.io/promo";
+
+async function cargarPromosHome() {
+  try {
+    const resp = await fetch(URL_PROMOS);
+    if (!resp.ok) throw new Error("Error al obtener promos");
+
+    const promos = await resp.json();
+    const contenedor = document.getElementById("promos-home");
+    contenedor.innerHTML = "";
+
+    promos
+      .filter(p => p.disponible !== false) 
+      .forEach(promo => {
+        const card = document.createElement("div");
+        card.classList.add("promo-card");
+
+        
+        card.innerHTML = `
+          <img src="${promo.imagen}" alt="${promo.titulo}" />
+          <h3>${promo.titulo}</h3>
+          <p>$${promo.precio}</p>
+        `;
+
+        contenedor.appendChild(card);
+      });
+
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+
+cargarPromosHome();

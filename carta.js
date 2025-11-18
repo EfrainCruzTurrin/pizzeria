@@ -1,3 +1,5 @@
+// CARTA
+
 const urlApi = "https://690b50956ad3beba00f46174.mockapi.io/api/menu";
 let productosCache = [];
 
@@ -104,3 +106,36 @@ function actualizarBotonCarrito() {
     boton.textContent = `🛒 (${total})`;
   }
 }
+
+// PROMOS
+
+
+const URL_PROMOS = "https://691c6c133aaeed735c90c5f7.mockapi.io/promo"; 
+
+async function cargarPromos() {
+  try {
+    const resp = await fetch(URL_PROMOS);
+    if (!resp.ok) {
+      throw new Error("Error al obtener promos: " + resp.status);
+    }
+
+    const promos = await resp.json();
+    const ul = document.getElementById("lista-promos");
+    ul.innerHTML = "";
+
+    promos
+      .filter(p => p.disponible !== false) 
+      .forEach(promo => {
+        const li = document.createElement("li");
+       
+        li.textContent = `${promo.titulo} - $${promo.precio}`;
+        ul.appendChild(li);
+      });
+
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+
+cargarPromos();

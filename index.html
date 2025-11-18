@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PizzaLine - Inicio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -10,8 +11,7 @@
 <body>
 
   <!-- ==================== AVISO LOGIN ==================== -->
-  <div id="login-warning" 
-       style="display:none;
+  <div id="login-warning" style="display:none;
               padding:20px;
               background:#ffe5e5;
               border:2px solid #d32f2f;
@@ -20,10 +20,9 @@
               text-align:center;
               margin:20px;
               border-radius:10px;">
-    ⚠ Necesitas iniciar sesión para continuar  
+    ⚠ Necesitas iniciar sesión para continuar
     <br><br>
-    <a href="login.html" 
-       style="background:#d32f2f;
+    <a href="login.html" style="background:#d32f2f;
               color:white;
               padding:10px 20px;
               border-radius:6px;
@@ -37,13 +36,12 @@
 
   <!-- ==================== HEADER ==================== -->
   <div class="headerPrincipal"
-       style="display:flex; justify-content:space-between; align-items:center; padding:10px 20px;">
+    style="display:flex; justify-content:space-between; align-items:center; padding:10px 20px;">
 
     <!-- LOGO -->
     <div class="logo" style="display:flex; align-items:center; gap:10px;">
-      <img src="images/LogoTipoPizzaLine.png" 
-           alt="PizzaLine Logo" 
-           style="width:300px; height:150px; border-radius:8px;" />
+      <img src="images/LogoTipoPizzaLine.png" alt="PizzaLine Logo"
+        style="width:300px; height:150px; border-radius:8px;" />
     </div>
 
     <!-- NAV -->
@@ -70,18 +68,8 @@
     <!-- PROMOCIONES -->
     <section class="promociones">
       <h2>Promociones y Combos</h2>
-      <div class="promos">
-        <div class="promo-card">
-          <img src="images/pizza-muzarella-451x300.png" alt="Promo 1" />
-          <h3>2x1 en Muzza</h3>
-          <p>Todos los martes y jueves</p>
-        </div>
+      <div class="promos" id="promos-home">
 
-        <div class="promo-card">
-          <img src="images/4399634f1a15-2-slice-pizza-gaseosa-400ml.png" alt="Promo 2" />
-          <h3>Combo Familiar</h3>
-          <p>2 Pizzas + 1 Gaseosa a $11000</p>
-        </div>
       </div>
     </section>
 
@@ -137,9 +125,7 @@
 
     <h4>Ubicación</h4>
     <div class="ubicacion" style="display:flex; align-items:center; gap:10px;">
-      <img src="images/ubicacion.png"
-           height="250"
-           style="width:3000px; border:0; border-radius:10px;" loading="lazy" />
+      <img src="images/ubicacion.png" height="250" style="width:3000px; border:0; border-radius:10px;" loading="lazy" />
     </div>
   </section>
 
@@ -147,12 +133,11 @@
   <section id="reseñas" style="padding: 40px; background:#fff8f0;">
     <h3 style="text-align:center; color:#d32f2f; font-size:28px;">Reseñas de clientes</h3>
 
-    <form id="form-review"
-          style="max-width:600px; margin:20px auto; display:flex; flex-direction:column; gap:10px;">
+    <form id="form-review" style="max-width:600px; margin:20px auto; display:flex; flex-direction:column; gap:10px;">
       <input id="review-name" placeholder="Tu nombre" required
-             style="padding:10px; border-radius:6px; border:1px solid #ccc;" />
+        style="padding:10px; border-radius:6px; border:1px solid #ccc;" />
       <textarea id="review-text" placeholder="Tu reseña" required
-                style="padding:10px; height:100px; border-radius:6px; border:1px solid #ccc;"></textarea>
+        style="padding:10px; height:100px; border-radius:6px; border:1px solid #ccc;"></textarea>
 
       <select id="review-rating" style="padding:10px; border-radius:6px; border:1px solid #ccc;">
         <option value="5">5 ⭐</option>
@@ -185,4 +170,5 @@
   <script src="main.js"></script>
   <script src="carta.js"></script>
 </body>
+
 </html>
