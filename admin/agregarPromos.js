@@ -1,4 +1,4 @@
-const URL_PROMOS = "https://691967c59ccba073ee92d7d3.mockapi.io/promo";
+const URL_PROMOS = "https://691c6c133aaeed735c90c5f7.mockapi.io/promo";
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("form-promos");
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const nuevaPromo = {
             titulo,
             texto,
-            precio,
+            precio: parseFloat(precio),
             imagen,
             activa
         };

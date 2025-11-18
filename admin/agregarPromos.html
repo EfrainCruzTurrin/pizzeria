@@ -17,25 +17,27 @@
         <section>
             <form id="form-promos">
 
-              
+
                 <label for="titulo">Título de la promoción</label>
                 <input type="text" id="titulo" required>
 
-                
+
                 <label for="texto">Descripción</label>
                 <textarea id="texto" rows="3" placeholder="Ej: Todos los martes y jueves" required></textarea>
 
-                
+                <label for="precio">Precio</label>
+                <input type="number" id="precio" name="precio" step="0.01" required>
+
                 <label for="imagen">Imagen</label>
                 <select id="imagen" required>
                     <option value="" disabled selected>Seleccionar imagen...</option>
-                    
+
                     <option value="promo1.jpg">Promo 1</option>
                     <option value="promo2.jpg">Promo 2</option>
                     <option value="promo3.jpg">Promo 3</option>
                 </select>
 
-                
+
                 <label for="activa">
                     Activa
                     <input type="checkbox" id="activa" checked>
@@ -49,7 +51,7 @@
         <div id="mensaje"></div>
     </main>
 
-<script src="agregarPromos.js"></script>
+    <script src="agregarPromos.js"></script>
 </body>
 
 </html>
