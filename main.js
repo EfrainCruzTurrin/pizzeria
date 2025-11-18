@@ -4,15 +4,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("PizzaLine - Sitio cargado correctamente 🍕");
 
-  // Botón flotante → ir al carrito
-  const btn = document.getElementById("btn-flotante");
-  if (btn) {
-    btn.addEventListener("click", () => {
-      window.location.href = "carrito.html";
-    });
-  }
-
   updateAuthArea();
+  actualizarBotonFlotante();
 });
 
 /* ========= obtener usuario guardado ========= */
@@ -34,7 +27,6 @@ function updateAuthArea() {
   const user = getStoredUser();
 
   if (user) {
-    /* Usuario logueado */
     auth.innerHTML = `
       <span class="user-name">Hola, ${user.nombre.split(" ")[0]}</span>
       <button id="logout-btn" class="small">Cerrar sesión</button>
@@ -46,10 +38,23 @@ function updateAuthArea() {
       localStorage.removeItem("pizzaline_user");
       window.location.href = "index.html";
     });
-
   } else {
-    /* Usuario no logueado */
-    auth.innerHTML = `<a href="login.html">Login</a>`;
+    // Ya existe el botón de login en el HTML, no se necesita duplicar
     if (linkPedidos) linkPedidos.style.display = "none";
   }
+}
+
+/* ========= actualizar botón flotante con contador ========= */
+function actualizarBotonFlotante() {
+  const btn = document.getElementById("btn-flotante");
+  if (!btn) return;
+
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  const total = carrito.reduce((acc, p) => acc + p.cantidad, 0);
+
+  btn.textContent = total > 0 ? `🛒 (${total})` : "🛒";
+
+  btn.addEventListener("click", () => {
+    window.location.href = "carrito.html";
+  });
 }
