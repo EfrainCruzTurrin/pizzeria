@@ -1,35 +1,33 @@
-const API_URL = 'https://691967c59ccba073ee92d7d3.mockapi.io/users';
-
-document.getElementById('formulario').addEventListener('submit', async (e) => {
+document.getElementById("formulario").addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    const nombre = document.getElementById("nombre").value;
+    const telefono = document.getElementById("telefono").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-const userData = {
-    nombre: document.getElementById('nombre').value,
-    telefono: document.getElementById('telefono').value,
-    email: document.getElementById('email').value,
-    password: document.getElementById('password').value,
-    role: 'user' 
-};
+    const nuevoUsuario = {
+        nombre,
+        telefono,
+        email,
+        password
+    };
 
-try {
-    const response = await fetch(API_URL, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(userData)
+    const res = await fetch("https://691967c59ccba073ee92d7d3.mockapi.io/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(nuevoUsuario)
     });
 
-    if (response.ok) {
-        const data = await response.json();
-        alert('¡Registro exitoso!');
-        console.log('Usuario creado:', data);
-        document.getElementById('formulario').reset();
+    if (res.ok) {
+        const data = await res.json();   //  ✅ ESTA ES LA LÍNEA QUE FALTABA
+
+        alert("Usuario registrado con éxito");
+
+        localStorage.setItem("pizzaline_user", JSON.stringify(data));
+
+        window.location.href = "index.html";
     } else {
-        alert('Error al registrar usuario');
+        alert("Hubo un error al registrar el usuario.");
     }
-} catch (error) {
-    console.error('Error:', error);
-    alert('Error de conexión');
-}});
+});

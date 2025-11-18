@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" id="infoTodo">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +11,7 @@
 <body id="bodyInfo">
 
     <!-- ==================== AVISO LOGIN (AQUÍ VA) ==================== -->
-  <div id="login-warning" 
-       style="display:none;
+    <div id="login-warning" style="display:none;
               padding:20px;
               background:#ffe5e5;
               border:2px solid #d32f2f;
@@ -20,19 +20,17 @@
               text-align:center;
               margin:20px;
               border-radius:10px;">
-      ⚠ Necesitas iniciar sesión para continuar  
-      <br><br>
-      <a href="login.html" 
-         style="background:#d32f2f;
+        ⚠ Necesitas iniciar sesión para continuar
+        <br><br>
+        <a href="login.html" style="background:#d32f2f;
                 color:white;
                 padding:10px 20px;
                 border-radius:6px;
                 text-decoration:none;">
-          Ir al login
-      </a>
-  </div>
-  <script src="js/checkLogin.js"></script>
-  <!-- ==================== FIN AVISO ==================== -->
+            Ir al login
+        </a>
+    </div>
+    <!-- ==================== FIN AVISO ==================== -->
 
     <!-- ===== HEADER ===== -->
     <div class="headerPrincipal">
@@ -41,7 +39,6 @@
             <h1>PizzaLine</h1>
         </div>
 
-        <!-- NAV -->
         <div class="navPrincipal">
             <ul>
                 <li><a href="info.html">Acerca de Nosotros</a></li>
@@ -49,6 +46,7 @@
                 <li><a href="branches.html">Sucursales</a></li>
             </ul>
         </div>
+
 
         <div class="login-btn">
             <a href="login.html">Login</a>
@@ -73,8 +71,10 @@
         <h2 class="h2SectionInfo">Bienvenidos</h2>
         <img class="imgSectionInfo" src="images/Pizza-Logo-Design-Graphics-29132095-1.jpg" alt="LOGO DE LA PIZZERIA">
         <p class="pSectionInfo">
-            En PizzaLine, hacemos pizza artesanal con el corazón puesto en cada masa. Somos una pizzería familiar que combina la auténtica tradición napolitana con la calidez de Villa María.
-            Ingredientes frescos, masa fermentada 48 horas, horno a leña y recetas que han pasado la prueba del tiempo. Sin secretos, solo trabajo honesto y pasión por lo que hacemos.
+            En PizzaLine, hacemos pizza artesanal con el corazón puesto en cada masa. Somos una pizzería familiar que
+            combina la auténtica tradición napolitana con la calidez de Villa María.
+            Ingredientes frescos, masa fermentada 48 horas, horno a leña y recetas que han pasado la prueba del tiempo.
+            Sin secretos, solo trabajo honesto y pasión por lo que hacemos.
             PizzaLine - Desde 1998 en Villa María
         </p>
     </section>
@@ -95,7 +95,8 @@
             1998: un local pequeño con cuatro mesas...
         </p>
         <blockquote>
-            <p><i>"La pizza y el código tienen algo en común: puedes copiar la receta, pero sin dedicación, nunca será lo mismo." - Marco, fundador de PizzaLine</i></p>
+            <p><i>"La pizza y el código tienen algo en común: puedes copiar la receta, pero sin dedicación, nunca será
+                    lo mismo." - Marco, fundador de PizzaLine</i></p>
         </blockquote>
 
         <hr>
@@ -135,7 +136,7 @@
     <script>
         const btnTop = document.getElementById('btnTop');
         btnTop.style = "position:fixed;right:20px;bottom:40px;width:50px;height:50px;font-size:20px;border-radius:50%;background:#FFD700;border:none;cursor:pointer;z-index:9999;";
-        btnTop.addEventListener('click', () => 
+        btnTop.addEventListener('click', () =>
             window.scrollTo({ top: 0, behavior: 'smooth' })
         );
     </script>
@@ -145,5 +146,10 @@
     <div class="footerPrincipal">
         <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
     </div>
+
+    <script src="js/checkLogin.js"></script>
+    <script src="auth.js"></script>
+
 </body>
+
 </html>
