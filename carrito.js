@@ -15,10 +15,11 @@ function mostrarMensaje(msg, tipo = "info") {
 /* ---------------- AGREGAR ---------------- */
 function agregarAlCarrito(id, nombre, precio) {
   const existe = carrito.find(item => item.id === id);
-
-  if (existe) existe.cantidad++;
-  else carrito.push({ id, nombre, precio, cantidad: 1 });
-
+  if (existe) {
+    existe.cantidad++;
+  } else {
+    carrito.push({ id, nombre, precio, cantidad: 1 });
+  }
   actualizarCarrito();
 }
 
@@ -50,7 +51,15 @@ function actualizarCarrito() {
   const cont = document.getElementById("carrito-container");
   const total = document.getElementById("carrito-total");
 
+  if (!cont || !total) return;
+
   cont.innerHTML = "";
+
+  if (carrito.length === 0) {
+    cont.innerHTML = "<p style='text-align:center;'>Tu carrito está vacío.</p>";
+    total.innerText = "Total: $0";
+    return;
+  }
 
   carrito.forEach(item => {
     cont.innerHTML += `
@@ -105,14 +114,11 @@ async function finalizarPedido() {
 
   try {
     await enviarPedido(pedido);
-
     mostrarMensaje("Pedido enviado con éxito!");
     vaciarCarrito();
-
     setTimeout(() => {
       window.location.href = "index.html";
     }, 1500);
-
   } catch (e) {
     console.error(e);
     mostrarMensaje("Hubo un error al enviar el pedido", "error");
