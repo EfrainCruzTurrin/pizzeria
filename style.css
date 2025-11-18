@@ -116,7 +116,7 @@ html, body {
     padding: 15px;
 }
 
-/* ===== BOTÓN FLOTANTE ===== */
+/* ===== BOTÓN FLOTANTE CARRITO ===== */
 #btn-flotante {
     position: fixed;
     bottom: 20px;
@@ -127,13 +127,99 @@ html, body {
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #btn-flotante:hover {
     background-color: #b71c1c;
+}
+
+#contador-carrito {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #ff9800;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* ===== CARRITO ===== */
+.carrito-lista {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.carrito-controles {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.carrito-controles button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.eliminar {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Botones de acción */
+.btn-vaciar,
+.btn-finalizar {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-vaciar {
+    background-color: #999;
+    color: white;
+}
+
+.btn-finalizar {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* ===== PEDIDOS ===== */
+.pedido-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -146,10 +232,23 @@ html, body {
         flex-direction: column;
         gap: 8px;
     }
+
+    .promo-card {
+        width: 100%;
+    }
+
+    .carrito-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .carrito-controles {
+        justify-content: flex-start;
+    }
 }
 
 /* ===== end of main page ===== */
-
 
 /* INICIO DE CARTA */
 /* Fondo general */
