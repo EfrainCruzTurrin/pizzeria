@@ -27,6 +27,8 @@ function updateAuthArea() {
   const user = getStoredUser();
 
   if (user) {
+    const loginBtn = document.querySelector(".login-btn");
+    if (loginBtn) loginBtn.style.display = "none";
     auth.innerHTML = `
       <span class="user-name">Hola, ${user.nombre.split(" ")[0]}</span>
       <button id="logout-btn" class="small">Cerrar sesión</button>
