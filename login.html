@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PizzaLine - Iniciar Sesión</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PizzaLine - Iniciar Sesión</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ===== HEADER LOGIN ===== -->
-    <div class="headerLogin">
-        <h2>PizzaLine</h2>
-    </div>
+  <!-- ===== HEADER LOGIN ===== -->
+  <div class="headerLogin">
+    <h2>PizzaLine</h2>
+  </div>
 
-    <!-- ===== FORM LOGIN ===== -->
-    <section class="registro">
-        <h2>Iniciar Sesión</h2>
+  <!-- ===== FORM LOGIN ===== -->
+  <section class="registro">
+    <h2>Iniciar Sesión</h2>
 
-        <!-- Lugar donde mostraremos los mensajes -->
-        <p id="login-msg" style="text-align:center; font-weight:bold;"></p>
+    <!-- Lugar donde mostraremos los mensajes -->
+    <p id="login-msg" style="text-align:center; font-weight:bold;"></p>
 
-        <form id="loginForm">
-            <input type="email" placeholder="Correo Electrónico" required>
-            <input type="password" placeholder="Contraseña" required>
-            <button type="submit">Ingresar</button>
-        </form>
+    <form id="loginForm">
+      <input type="email" placeholder="Correo Electrónico" required>
+      <input type="password" placeholder="Contraseña" required>
+      <button type="submit">Ingresar</button>
+    </form>
 
-        <p>¿No tenés cuenta? <a href="registroUsuario.html">Registrate acá</a></p>
-    </section>
+    <p>¿No tenés cuenta? <a href="registroUsuario.html">Registrate acá</a></p>
+  </section>
 
-    <!-- ===== FOOTER LOGIN ===== -->
-    <div class="footerLogin">
-        <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
-    </div>
+  <!-- ===== FOOTER LOGIN ===== -->
+  <div class="footerLogin">
+    <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
+  </div>
 
-    <!-- ===== SCRIPT LOGIN ===== -->
-    <script>
-    const URL_USERS = "https://690b50956ad3beba00f46174.mockapi.io/api/users";
+  <!-- ===== SCRIPT LOGIN ===== -->
+  <script>
+    const URL_USERS = "https://691967c59ccba073ee92d7d3.mockapi.io/users";
 
     const msg = document.getElementById("login-msg");
 
@@ -83,8 +84,12 @@
         msg.style.color = "red";
       }
     });
-    </script>
+  </script>
 
+  <a href="index.html" id="btnVolver">
+    <span class="pizzaIcono">🍕</span>
+    <span class="textoVolver">Volver</span>
+  </a>
 </body>
-</html>
 
+</html>

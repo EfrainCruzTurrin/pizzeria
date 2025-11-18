@@ -11,8 +11,7 @@
 <body>
 
     <!-- ==================== AVISO LOGIN ==================== -->
-    <div id="login-warning" 
-       style="display:none;
+    <div id="login-warning" style="display:none;
               padding:20px;
               background:#ffe5e5;
               border:2px solid #d32f2f;
@@ -21,10 +20,9 @@
               text-align:center;
               margin:20px;
               border-radius:10px;">
-        ⚠ Necesitas iniciar sesión para continuar  
+        ⚠ Necesitas iniciar sesión para continuar
         <br><br>
-        <a href="login.html" 
-           style="background:#d32f2f;
+        <a href="login.html" style="background:#d32f2f;
                   color:white;
                   padding:10px 20px;
                   border-radius:6px;
@@ -33,30 +31,26 @@
         </a>
     </div>
 
-    <!-- LOGIN CHECK -->
-    <script src="js/checkLogin.js"></script>
-    <!-- ==================== FIN AVISO ==================== -->
 
 
     <!-- ==================== HEADER ==================== -->
     <div class="headerPrincipal"
-         style="display:flex; justify-content:space-between; align-items:center; padding:10px 20px;">
+        style="display:flex; justify-content:space-between; align-items:center; padding:10px 20px;">
 
         <!-- LOGO -->
         <div class="logo" style="display:flex; align-items:center; gap:10px;">
-            <img src="images/LogoTipoPizzaLine.png" 
-                 alt="PizzaLine Logo" 
-                 style="width:300px; height:150px; border-radius:8px;">
+            <img src="images/LogoTipoPizzaLine.png" alt="PizzaLine Logo"
+                style="width:300px; height:150px; border-radius:8px;">
         </div>
 
-        <!-- NAV -->
-        <div class="navPrincipal" style="flex:1; display:flex; justify-content:center;">
-            <ul style="display:flex; gap:25px; list-style:none;">
+        <div class="navPrincipal">
+            <ul>
                 <li><a href="info.html">Acerca de Nosotros</a></li>
                 <li><a href="carta.html">Carta</a></li>
                 <li><a href="branches.html">Sucursales</a></li>
             </ul>
         </div>
+
 
         <!-- LOGIN + USER AREA -->
         <div style="display:flex; align-items:center; gap:15px;">
@@ -148,9 +142,8 @@
 
         <h4>Ubicación</h4>
         <div class="ubicacion" style="display:flex; align-items:center; gap:10px;">
-            <img src="images/ubicacion.png"
-                 height="250"
-                 style="width:3000px; border:0; border-radius:10px;" loading="lazy">
+            <img src="images/ubicacion.png" height="250" style="width:3000px; border:0; border-radius:10px;"
+                loading="lazy">
         </div>
     </section>
 
@@ -160,11 +153,11 @@
         <h3 style="text-align:center; color:#d32f2f; font-size:28px;">Reseñas de clientes</h3>
 
         <form id="form-review"
-              style="max-width:600px; margin:20px auto; display:flex; flex-direction:column; gap:10px;">
+            style="max-width:600px; margin:20px auto; display:flex; flex-direction:column; gap:10px;">
             <input id="review-name" placeholder="Tu nombre" required
-                   style="padding:10px; border-radius:6px; border:1px solid #ccc;" />
+                style="padding:10px; border-radius:6px; border:1px solid #ccc;" />
             <textarea id="review-text" placeholder="Tu reseña" required
-                      style="padding:10px; height:100px; border-radius:6px; border:1px solid #ccc;"></textarea>
+                style="padding:10px; height:100px; border-radius:6px; border:1px solid #ccc;"></textarea>
 
             <select id="review-rating" style="padding:10px; border-radius:6px; border:1px solid #ccc;">
                 <option value="5">5 ⭐</option>
@@ -174,7 +167,8 @@
                 <option value="1">1 ⭐</option>
             </select>
 
-            <button style="padding:12px; background:#d32f2f; color:white; border:none; border-radius:6px; cursor:pointer;">
+            <button
+                style="padding:12px; background:#d32f2f; color:white; border:none; border-radius:6px; cursor:pointer;">
                 Enviar reseña
             </button>
         </form>
@@ -193,5 +187,9 @@
     <button id="btn-flotante">🛒</button>
 
     <script src="js/main.js"></script>
+    <script src="js/checkLogin.js"></script>
+    <script src="auth.js"></script>
+
 </body>
+
 </html>
