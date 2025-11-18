@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <title>Carrito - PizzaLine</title>
@@ -43,18 +42,35 @@
   <!-- LOGIN CHECK -->
   <script src="js/checkLogin.js"></script>
 
-  <h1 style="text-align:center;">Tu Carrito</h1>
+  <h1 style="text-align:center;">🛒 Tu Carrito</h1>
 
-  <div id="carrito-container" class="carrito-lista"></div>
+  <!-- Botón volver -->
+  <div style="text-align:center; margin-bottom:20px;">
+    <a href="carta.html"
+       style="background:#2196f3;
+              color:white;
+              padding:10px 20px;
+              border-radius:6px;
+              text-decoration:none;">
+      ← Volver al menú
+    </a>
+  </div>
 
-  <h2 id="carrito-total">Total: $0</h2>
+  <!-- Lista de productos -->
+  <div id="carrito-container" class="carrito-lista" style="max-width:600px; margin:auto;"></div>
 
-  <button onclick="vaciarCarrito()" class="btn-vaciar">Vaciar carrito</button>
-  <button onclick="finalizarPedido()" class="btn-finalizar">Finalizar pedido</button>
+  <!-- Total -->
+  <h2 id="carrito-total" style="text-align:center;">Total: $0</h2>
 
+  <!-- Acciones -->
+  <div style="text-align:center; margin-top:20px;">
+    <button onclick="vaciarCarrito()" class="btn-vaciar" style="margin-right:10px;">Vaciar carrito</button>
+    <button onclick="finalizarPedido()" class="btn-finalizar">Finalizar pedido</button>
+  </div>
+
+  <!-- Scripts -->
   <script src="orders.js"></script>
   <script src="carrito.js"></script>
 
 </body>
 </html>
-
