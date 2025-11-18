@@ -1,43 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Pedidos - PizzaLine</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Pedidos - PizzaLine</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- AVISO LOGIN (si no hay usuario) -->
-    <div id="login-warning"
-        style="display:none; padding:20px; background:#ffe5e5; border:2px solid #d32f2f; color:#b71c1c;
-               font-weight:bold; text-align:center; margin:20px; border-radius:10px;">
-        ⚠ Necesitas iniciar sesión para ver tus pedidos  
-        <br><br>
-        <a href="login.html"
-            style="background:#d32f2f; color:white; padding:10px 20px; border-radius:6px; text-decoration:none;">
-            Ir al login
-        </a>
-    </div>
+  <!-- ==================== AVISO LOGIN ==================== -->
+  <div id="login-warning"
+       style="display:none;
+              padding:20px;
+              background:#ffe5e5;
+              border:2px solid #d32f2f;
+              color:#b71c1c;
+              font-weight:bold;
+              text-align:center;
+              margin:20px;
+              border-radius:10px;">
+      ⚠ Necesitas iniciar sesión para ver tus pedidos  
+      <br><br>
+      <a href="login.html"
+         style="background:#d32f2f;
+                color:white;
+                padding:10px 20px;
+                border-radius:6px;
+                text-decoration:none;">
+          Ir al login
+      </a>
+  </div>
 
-    <!-- Verificación login -->
-    <script src="js/checkLogin.js"></script>
+  <!-- Verificación login -->
+  <script src="checkLogin.js"></script>
 
-    <h1 style="text-align:center; margin-top:20px;">Mis pedidos</h1>
+  <h1 style="text-align:center; margin-top:20px;">📦 Mis pedidos</h1>
 
-    <div id="mis-pedidos-container"
-         style="max-width:900px; margin:20px auto; padding:20px; display:flex; flex-direction:column; gap:20px;">
-    </div>
+  <!-- Botón volver -->
+  <div style="text-align:center; margin-bottom:20px;">
+    <a href="index.html"
+       style="background:#2196f3;
+              color:white;
+              padding:10px 20px;
+              border-radius:6px;
+              text-decoration:none;">
+      ← Volver al inicio
+    </a>
+  </div>
 
-    <p id="no-pedidos"
-       style="display:none; text-align:center; margin-top:30px; font-size:20px; color:#777;">
-       No tienes pedidos realizados aún.
-    </p>
+  <!-- Contenedor de pedidos -->
+  <div id="mis-pedidos-container"
+       style="max-width:900px;
+              margin:20px auto;
+              padding:20px;
+              display:flex;
+              flex-direction:column;
+              gap:20px;">
+  </div>
 
-    <script src="orders.js"></script>
-    <script src="mispedidos.js"></script>
+  <!-- Mensaje si no hay pedidos -->
+  <p id="no-pedidos"
+     style="display:none;
+            text-align:center;
+            margin-top:30px;
+            font-size:20px;
+            color:#777;">
+     No tienes pedidos realizados aún.
+  </p>
+
+  <!-- Scripts -->
+  <script src="orders.js"></script>
+  <script src="misPedidos.js"></script>
 
 </body>
 </html>
