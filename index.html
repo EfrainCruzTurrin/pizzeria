@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PizzaLine - Inicio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PizzaLine - Inicio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-    <!-- ==================== AVISO LOGIN ==================== -->
-    <div id="login-warning" 
+  <!-- ==================== AVISO LOGIN ==================== -->
+  <div id="login-warning" 
        style="display:none;
               padding:20px;
               background:#ffe5e5;
@@ -21,177 +20,169 @@
               text-align:center;
               margin:20px;
               border-radius:10px;">
-        ⚠ Necesitas iniciar sesión para continuar  
-        <br><br>
-        <a href="login.html" 
-           style="background:#d32f2f;
-                  color:white;
-                  padding:10px 20px;
-                  border-radius:6px;
-                  text-decoration:none;">
-            Ir al login
-        </a>
+    ⚠ Necesitas iniciar sesión para continuar  
+    <br><br>
+    <a href="login.html" 
+       style="background:#d32f2f;
+              color:white;
+              padding:10px 20px;
+              border-radius:6px;
+              text-decoration:none;">
+      Ir al login
+    </a>
+  </div>
+
+  <!-- LOGIN CHECK -->
+  <script src="js/checkLogin.js"></script>
+
+  <!-- ==================== HEADER ==================== -->
+  <div class="headerPrincipal"
+       style="display:flex; justify-content:space-between; align-items:center; padding:10px 20px;">
+
+    <!-- LOGO -->
+    <div class="logo" style="display:flex; align-items:center; gap:10px;">
+      <img src="images/LogoTipoPizzaLine.png" 
+           alt="PizzaLine Logo" 
+           style="width:300px; height:150px; border-radius:8px;" />
     </div>
 
-    <!-- LOGIN CHECK -->
-    <script src="js/checkLogin.js"></script>
-    <!-- ==================== FIN AVISO ==================== -->
-
-
-    <!-- ==================== HEADER ==================== -->
-    <div class="headerPrincipal"
-         style="display:flex; justify-content:space-between; align-items:center; padding:10px 20px;">
-
-        <!-- LOGO -->
-        <div class="logo" style="display:flex; align-items:center; gap:10px;">
-            <img src="images/LogoTipoPizzaLine.png" 
-                 alt="PizzaLine Logo" 
-                 style="width:300px; height:150px; border-radius:8px;">
-        </div>
-
-        <!-- NAV -->
-        <div class="navPrincipal" style="flex:1; display:flex; justify-content:center;">
-            <ul style="display:flex; gap:25px; list-style:none;">
-                <li><a href="info.html">Acerca de Nosotros</a></li>
-                <li><a href="carta.html">Carta</a></li>
-                <li><a href="branches.html">Sucursales</a></li>
-            </ul>
-        </div>
-
-        <!-- LOGIN + USER AREA -->
-        <div style="display:flex; align-items:center; gap:15px;">
-
-            <div class="login-btn">
-                <a href="login.html">Login</a>
-            </div>
-
-            <!-- Aquí aparece “Hola, usuario / Cerrar sesión” -->
-            <div id="auth-area"></div>
-
-        </div>
+    <!-- NAV -->
+    <div class="navPrincipal" style="flex:1; display:flex; justify-content:center;">
+      <ul style="display:flex; gap:25px; list-style:none;">
+        <li><a href="info.html">Acerca de Nosotros</a></li>
+        <li><a href="carta.html">Carta</a></li>
+        <li><a href="branches.html">Sucursales</a></li>
+      </ul>
     </div>
 
-
-    <!-- ==================== MAIN ==================== -->
-    <div class="mainPrincipal">
-
-        <!-- PROMOCIONES -->
-        <section class="promociones">
-            <h2>Promociones y Combos</h2>
-            <div class="promos">
-                <div class="promo-card">
-                    <img src="images/pizza-muzarella-451x300.png" alt="Promo 1">
-                    <h3>2x1 en Muzza</h3>
-                    <p>Todos los martes y jueves</p>
-                </div>
-
-                <div class="promo-card">
-                    <img src="images/4399634f1a15-2-slice-pizza-gaseosa-400ml.png" alt="Promo 2">
-                    <h3>Combo Familiar</h3>
-                    <p>2 Pizzas + 1 Gaseosa a $11000</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ASIDE -->
-        <div class="asidePrincipal">
-
-            <section class="recomendaciones">
-                <h3>🍕 Recomendaciones</h3>
-                <ul>
-                    <li>Fugazzeta con cheddar</li>
-                    <li>Napolitana Especial</li>
-                    <li>Calabresa Picante</li>
-                </ul>
-            </section>
-
-            <section class="top3">
-                <h3>🏆 Top 3 Más Pedidas</h3>
-                <ol>
-                    <li>Muzzarella</li>
-                    <li>Napolitana</li>
-                    <li>4 Quesos</li>
-                </ol>
-            </section>
-
-            <section class="descuentos">
-                <h3>💳 Descuentos Bancarios</h3>
-                <div class="bancos">
-                    <img src="images/Banco_Nación.svg.png" alt="Banco 1">
-                    <img src="images/Logo_Banco_Galicia.svg.png" alt="Banco 2">
-                    <img src="images/Banco_Santander_Logotipo_(2007-2018).svg" alt="Banco 3">
-                </div>
-            </section>
-        </div>
+    <!-- LOGIN + USER AREA -->
+    <div style="display:flex; align-items:center; gap:15px;">
+      <div class="login-btn">
+        <a href="login.html">Login</a>
+      </div>
+      <div id="auth-area"></div>
     </div>
+  </div>
 
+  <!-- ==================== MAIN ==================== -->
+  <div class="mainPrincipal">
 
-    <!-- ==================== CONTACTO / REDES ==================== -->
-    <section class="contacto-rapido" style="padding:30px; background:#fafafa; text-align:center;">
-        <h3>Encuéntranos</h3>
-
-        <p><strong>Horario:</strong><br>
-            Lun-Vie: 19:00 - 00:00<br>
-            Sab-Dom: 12:00 - 15:00 / 19:00 - 01:00
-        </p>
-
-        <h4>Redes</h4>
-        <div class="socials" style="margin-bottom:15px;">
-            <a href="https://instagram.com" target="_blank">Instagram</a> |
-            <a href="https://facebook.com" target="_blank">Facebook</a>
+    <!-- PROMOCIONES -->
+    <section class="promociones">
+      <h2>Promociones y Combos</h2>
+      <div class="promos">
+        <div class="promo-card">
+          <img src="images/pizza-muzarella-451x300.png" alt="Promo 1" />
+          <h3>2x1 en Muzza</h3>
+          <p>Todos los martes y jueves</p>
         </div>
 
-        <div class="social-icons" style="display:flex; justify-content:center; gap:20px; margin-top:10px;">
-            <img src="images/Instagram_logo_2022.svg.png" alt="Instagram" style="width:70px;">
-            <img src="images/Logo_de_Facebook.png" alt="Facebook" style="width:70px;">
+        <div class="promo-card">
+          <img src="images/4399634f1a15-2-slice-pizza-gaseosa-400ml.png" alt="Promo 2" />
+          <h3>Combo Familiar</h3>
+          <p>2 Pizzas + 1 Gaseosa a $11000</p>
         </div>
-
-        <h4>Ubicación</h4>
-        <div class="ubicacion" style="display:flex; align-items:center; gap:10px;">
-            <img src="images/ubicacion.png"
-                 height="250"
-                 style="width:3000px; border:0; border-radius:10px;" loading="lazy">
-        </div>
+      </div>
     </section>
 
+    <!-- ASIDE -->
+    <div class="asidePrincipal">
+      <section class="recomendaciones">
+        <h3>🍕 Recomendaciones</h3>
+        <ul>
+          <li>Fugazzeta con cheddar</li>
+          <li>Napolitana Especial</li>
+          <li>Calabresa Picante</li>
+        </ul>
+      </section>
 
-    <!-- ==================== RESEÑAS ==================== -->
-    <section id="reseñas" style="padding: 40px; background:#fff8f0;">
-        <h3 style="text-align:center; color:#d32f2f; font-size:28px;">Reseñas de clientes</h3>
+      <section class="top3">
+        <h3>🏆 Top 3 Más Pedidas</h3>
+        <ol>
+          <li>Muzzarella</li>
+          <li>Napolitana</li>
+          <li>4 Quesos</li>
+        </ol>
+      </section>
 
-        <form id="form-review"
-              style="max-width:600px; margin:20px auto; display:flex; flex-direction:column; gap:10px;">
-            <input id="review-name" placeholder="Tu nombre" required
-                   style="padding:10px; border-radius:6px; border:1px solid #ccc;" />
-            <textarea id="review-text" placeholder="Tu reseña" required
-                      style="padding:10px; height:100px; border-radius:6px; border:1px solid #ccc;"></textarea>
+      <section class="descuentos">
+        <h3>💳 Descuentos Bancarios</h3>
+        <div class="bancos">
+          <img src="images/Banco_Nación.svg.png" alt="Banco 1" />
+          <img src="images/Logo_Banco_Galicia.svg.png" alt="Banco 2" />
+          <img src="images/Banco_Santander_Logotipo_(2007-2018).svg" alt="Banco 3" />
+        </div>
+      </section>
+    </div>
+  </div>
 
-            <select id="review-rating" style="padding:10px; border-radius:6px; border:1px solid #ccc;">
-                <option value="5">5 ⭐</option>
-                <option value="4">4 ⭐</option>
-                <option value="3">3 ⭐</option>
-                <option value="2">2 ⭐</option>
-                <option value="1">1 ⭐</option>
-            </select>
+  <!-- ==================== CONTACTO / REDES ==================== -->
+  <section class="contacto-rapido" style="padding:30px; background:#fafafa; text-align:center;">
+    <h3>Encuéntranos</h3>
+    <p><strong>Horario:</strong><br>
+      Lun-Vie: 19:00 - 00:00<br>
+      Sab-Dom: 12:00 - 15:00 / 19:00 - 01:00
+    </p>
 
-            <button style="padding:12px; background:#d32f2f; color:white; border:none; border-radius:6px; cursor:pointer;">
-                Enviar reseña
-            </button>
-        </form>
-
-        <div id="reviews-list" style="max-width:700px; margin:20px auto;"></div>
-    </section>
-
-
-    <!-- ==================== FOOTER ==================== -->
-    <div class="footerPrincipal">
-        <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
+    <h4>Redes</h4>
+    <div class="socials" style="margin-bottom:15px;">
+      <a href="https://instagram.com" target="_blank">Instagram</a> |
+      <a href="https://facebook.com" target="_blank">Facebook</a>
     </div>
 
+    <div class="social-icons" style="display:flex; justify-content:center; gap:20px; margin-top:10px;">
+      <img src="images/Instagram_logo_2022.svg.png" alt="Instagram" style="width:70px;" />
+      <img src="images/Logo_de_Facebook.png" alt="Facebook" style="width:70px;" />
+    </div>
 
-    <!-- ==================== BOTÓN FLOTANTE CARRITO ==================== -->
-    <button id="btn-flotante">🛒</button>
+    <h4>Ubicación</h4>
+    <div class="ubicacion" style="display:flex; align-items:center; gap:10px;">
+      <img src="images/ubicacion.png"
+           height="250"
+           style="width:300px; border:0; border-radius:10px;" loading="lazy" />
+    </div>
+  </section>
 
-    <script src="js/main.js"></script>
+  <!-- ==================== RESEÑAS ==================== -->
+  <section id="reseñas" style="padding: 40px; background:#fff8f0;">
+    <h3 style="text-align:center; color:#d32f2f; font-size:28px;">Reseñas de clientes</h3>
+
+    <form id="form-review"
+          style="max-width:600px; margin:20px auto; display:flex; flex-direction:column; gap:10px;">
+      <input id="review-name" placeholder="Tu nombre" required
+             style="padding:10px; border-radius:6px; border:1px solid #ccc;" />
+      <textarea id="review-text" placeholder="Tu reseña" required
+                style="padding:10px; height:100px; border-radius:6px; border:1px solid #ccc;"></textarea>
+
+      <select id="review-rating" style="padding:10px; border-radius:6px; border:1px solid #ccc;">
+        <option value="5">5 ⭐</option>
+        <option value="4">4 ⭐</option>
+        <option value="3">3 ⭐</option>
+        <option value="2">2 ⭐</option>
+        <option value="1">1 ⭐</option>
+      </select>
+
+      <button style="padding:12px; background:#d32f2f; color:white; border:none; border-radius:6px; cursor:pointer;">
+        Enviar reseña
+      </button>
+    </form>
+
+    <div id="reviews-list" style="max-width:700px; margin:20px auto;"></div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <div class="footerPrincipal">
+    <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
+  </div>
+
+  <!-- ==================== BOTÓN FLOTANTE CARRITO ==================== -->
+  <button id="btn-flotante" onclick="window.location.href='carrito.html'">
+    🛒
+    <span id="contador-carrito"></span>
+  </button>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script src="carta.js"></script>
 </body>
 </html>
