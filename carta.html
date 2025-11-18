@@ -8,15 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
 </head>
 
 <body id="bodyCarta">
 
   <!-- ==================== AVISO LOGIN ==================== -->
-  <div id="login-warning" 
+  <div id="login-warning"
        style="display:none;
               padding:20px;
               background:#ffe5e5;
@@ -28,7 +25,7 @@
               border-radius:10px;">
       ⚠ Necesitas iniciar sesión para continuar  
       <br><br>
-      <a href="login.html" 
+      <a href="login.html"
          style="background:#d32f2f;
                 color:white;
                 padding:10px 20px;
@@ -60,6 +57,19 @@
       <div class="login-btn">
           <a href="login.html">Login</a>
       </div>
+
+      <!-- BOTÓN CARRITO -->
+      <div class="carrito-btn">
+        <a href="carrito.html" id="boton-carrito"
+           style="background:#ff9800;
+                  color:white;
+                  padding:10px 20px;
+                  border-radius:6px;
+                  text-decoration:none;
+                  font-weight:bold;">
+          🛒 (0)
+        </a>
+      </div>
   </div>
 
   <a href="index.html" id="btnVolver">
@@ -71,9 +81,9 @@
 
   <!-- BUSCADOR -->
   <div class="busqueda-wrap" style="text-align:center; margin-top:20px;">
-    <input id="search-input" 
-           type="search" 
-           placeholder="Buscar pizza por nombre..." 
+    <input id="search-input"
+           type="search"
+           placeholder="Buscar pizza por nombre..."
            style="padding:10px; width:60%; border-radius:8px; border:1px solid #ccc; font-size:16px;">
   </div>
 
@@ -99,7 +109,6 @@
     </main>
   </div>
 
-  <script src="carrito.js"></script>
   <script src="carta.js"></script>
 
   <!-- ===== FOOTER ===== -->
