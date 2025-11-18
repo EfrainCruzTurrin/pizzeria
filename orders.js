@@ -26,6 +26,7 @@ async function enviarPedido(pedido) {
  */
 async function obtenerPedidos() {
   const res = await fetch(ORDERS_URL);
+  if (!res.ok) throw new Error("No se pudo obtener los pedidos");
   return await res.json();
 }
 
@@ -39,5 +40,6 @@ async function actualizarEstadoPedido(id, nuevoEstado) {
     body: JSON.stringify({ estado: nuevoEstado })
   });
 
+  if (!res.ok) throw new Error("No se pudo actualizar el estado del pedido");
   return await res.json();
 }
