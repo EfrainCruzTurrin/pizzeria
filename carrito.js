@@ -116,6 +116,7 @@ async function finalizarPedido() {
     await enviarPedido(pedido);
     mostrarMensaje("Pedido enviado con éxito!");
     vaciarCarrito();
+
     setTimeout(() => {
       window.location.href = "index.html";
     }, 1500);

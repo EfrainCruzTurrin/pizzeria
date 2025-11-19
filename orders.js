@@ -1,24 +1,28 @@
-const API_BASE = "https://6913eb6df34a2ff1170d8dda.mockapi.io";
-const ORDERS_URL = `${API_BASE}/orders`;
+// orders.js
+// PONÉ ACÁ LA URL COMPLETA QUE TE DA MOCKAPI
+const ORDERS_URL = "https://691d0488d58e64bf0d34bb72.mockapi.io/orders"
 
 /**
  * CREA un pedido (POST)
- * pedido: {
- *   userId: string,
- *   items: array,
- *   total: number,
- *   estado: "pendiente"
- * }
  */
 async function enviarPedido(pedido) {
+  console.log("Enviando pedido a:", ORDERS_URL, pedido); // DEBUG
+
   const res = await fetch(ORDERS_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(pedido)
   });
 
-  if (!res.ok) throw new Error("No se pudo enviar el pedido");
-  return await res.json();
+  if (!res.ok) {
+    const texto = await res.text();
+    console.error("Error al enviar pedido. Status:", res.status, texto);
+    throw new Error("No se pudo enviar el pedido");
+  }
+
+  const data = await res.json();
+  console.log("Pedido creado en MockAPI:", data); // DEBUG
+  return data;
 }
 
 /**

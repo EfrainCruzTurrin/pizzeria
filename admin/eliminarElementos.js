@@ -1,6 +1,6 @@
 // ================== URLs de MockAPI ==================
 const URL_MENU = "https://690b50956ad3beba00f46174.mockapi.io/api/menu";
-const URL_PROMOS = "https://691c6c133aaeed735c90c5f7.mockapi.io/promo";
+const URL_PROMOS = "https://691967c59ccba073ee92d7d3.mockapi.io/promo";
 
 // caches en memoria para no perder los objetos originales
 let productosCache = [];

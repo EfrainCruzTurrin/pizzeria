@@ -1,4 +1,4 @@
-const ORDERS_URL = "https://690b50956ad3beba00f46174.mockapi.io/api/orders";
+const ORDERS_URL = "https://691d0488d58e64bf0d34bb72.mockapi.io/orders"
 
 const user = JSON.parse(localStorage.getItem("pizzaline_user"));
 const cont = document.getElementById("mis-pedidos-container");
