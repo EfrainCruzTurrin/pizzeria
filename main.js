@@ -82,7 +82,6 @@ async function cargarPromosHome() {
 
         
         card.innerHTML = `
-          <img src="${promo.imagen}" alt="${promo.titulo}" />
           <h3>${promo.titulo}</h3>
           <p>$${promo.precio}</p>
         `;
