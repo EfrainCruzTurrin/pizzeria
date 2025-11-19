@@ -1125,7 +1125,6 @@ form div {
   width: 600px; margin:40px auto;
 }
 
-<<<<<<< HEAD
 /* ADMINISTRACION */
 
 .page-administracion {
@@ -1254,77 +1253,11 @@ form div {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.15);
-=======
-/* ====================== MIS PEDIDOS ====================== */
-
-/* Aviso login */
-.login-warning {
-    display: none;
-    padding: 20px;
-    background: #ffe5e5;
-    border: 2px solid #d32f2f;
-    color: #b71c1c;
-    font-weight: bold;
-    text-align: center;
-    margin: 20px;
-    border-radius: 10px;
-}
-
-.btn-login-warning {
-    display: inline-block;
-    margin-top: 10px;
-    background: #d32f2f;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.btn-login-warning:hover {
-    background: #b71c1c;
-}
-
-/* Título */
-.titulo-pedidos {
-    text-align: center;
-    margin-top: 20px;
-    color: #d32f2f;
-    font-size: 32px;
-    font-weight: bold;
-}
-
-/* Botón volver */
-.volver-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.btn-volver {
-    background: #2196f3;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.btn-volver:hover {
-    background: #0b7dda;
-}
-
-/* Contenedor principal */
-.pedidos-container {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
->>>>>>> 6271dbef31f3edfcab209be0676f2130400c6a12
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-<<<<<<< HEAD
 /* BOTONES PRINCIPALES */
 .page-gestionar-menu .menu-btn {
     display: block;
@@ -1917,58 +1850,80 @@ form div {
     margin-top: 12px;
     font-size: 14px;
 }
-=======
-/* Mensaje "no pedidos" */
-.no-pedidos {
-    display: none;
-    text-align: center;
-    margin-top: 30px;
-    font-size: 20px;
-    color: #777;
-}
 
-/* ====================== TARJETAS DE PEDIDOS ====================== */
+/* ================================
+   Logueo de administración
+   ================================ */
 
-.pedido-card {
-    background: #fff5eb;
-    border: 1px solid #ffcb9a;
-    padding: 18px;
-    border-radius: 10px;
-    box-shadow: 0px 3px 5px rgba(0,0,0,0.1);
-}
-
-.pedido-header {
+.page-logueo-admin {
+    background: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
     display: flex;
-    justify-content: space-between;
-    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-logueo-admin .la-main {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.page-logueo-admin .la-card {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.page-logueo-admin .la-card h2 {
+    text-align: center;
     margin-bottom: 10px;
+    font-size: 20px;
 }
 
-.pedido-items {
-    padding-left: 15px;
+.page-logueo-admin .la-card label {
+    font-weight: 500;
 }
 
-.pedido-items li {
-    margin-bottom: 4px;
+.page-logueo-admin .la-card input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
 }
 
-.pedido-total {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 18px;
-    color: #d32f2f;
-}
-
-.pedido-estado {
+.page-logueo-admin .la-btn {
     margin-top: 8px;
-    font-size: 16px;
-    font-weight: bold;
+    padding: 10px 0;
+    border: none;
+    border-radius: 6px;
+    background: #2f2f2f;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
 }
 
-/* Estados */
-.estado-pendiente { color: #d97706; }   /* naranja */
-.estado-proceso   { color: #0ea5e9; }   /* celeste */
-.estado-finalizado { color: #16a34a; }  /* verde */
+.page-logueo-admin .la-btn:hover {
+    background: #444444;
+    transform: translateY(-2px);
+}
 
-/* ====================== END MIS PEDIDOS ====================== */
->>>>>>> 6271dbef31f3edfcab209be0676f2130400c6a12
+.page-logueo-admin .la-mensaje {
+    min-height: 18px;
+    font-size: 13px;
+}
+
+.page-logueo-admin .la-mensaje.error {
+    color: #e63946;
+}
+
+.page-logueo-admin .la-mensaje.ok {
+    color: #2e7d32;
+}
