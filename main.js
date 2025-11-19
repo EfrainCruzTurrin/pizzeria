@@ -29,12 +29,21 @@ function updateAuthArea() {
   if (user) {
     const loginBtn = document.querySelector(".login-btn");
     if (loginBtn) loginBtn.style.display = "none";
+
+    // Header con nombre clickeable
     auth.innerHTML = `
-      <span class="user-name">Hola, ${user.nombre.split(" ")[0]}</span>
+      <span id="mi-nombre" class="user-name" style="cursor:pointer; text-decoration:underline;">
+        Hola, ${user.nombre.split(" ")[0]}
+      </span>
       <button id="logout-btn" class="small">Cerrar sesión</button>
     `;
 
     if (linkPedidos) linkPedidos.style.display = "inline-block";
+
+    // CLICK EN NOMBRE → perfilUsuario.html con id del usuario
+    document.getElementById("mi-nombre").addEventListener("click", () => {
+      window.location.href = "perfilUsuario.html?id=" + user.id;
+    });
 
     document.getElementById("logout-btn").addEventListener("click", () => {
       localStorage.removeItem("pizzaline_user");
@@ -80,7 +89,6 @@ async function cargarPromosHome() {
         const card = document.createElement("div");
         card.classList.add("promo-card");
 
-        
         card.innerHTML = `
           <h3>${promo.titulo}</h3>
           <p>$${promo.precio}</p>
@@ -93,6 +101,5 @@ async function cargarPromosHome() {
     console.error(err);
   }
 }
-
 
 cargarPromosHome();
