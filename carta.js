@@ -110,7 +110,7 @@ function actualizarBotonCarrito() {
 // PROMOS
 
 
-const URL_PROMOS = "https://691967c59ccba073ee92d7d3.mockapi.io/promo"; 
+const URL_PROMOS = "https://691967c59ccba073ee92d7d3.mockapi.io/promo";
 
 async function cargarPromos() {
   try {
@@ -124,11 +124,41 @@ async function cargarPromos() {
     ul.innerHTML = "";
 
     promos
-      .filter(p => p.disponible !== false) 
+      .filter(p => p.disponible !== false) // solo promos visibles
       .forEach(promo => {
         const li = document.createElement("li");
-       
-        li.textContent = `${promo.titulo} - $${promo.precio}`;
+        li.classList.add("card-producto", "card-promo"); // mismo estilo que productos
+
+        // Título de la promo
+        const h3 = document.createElement("h3");
+        h3.textContent = promo.titulo;
+
+        // Descripción de la promo (si la hay)
+        const pTexto = document.createElement("p");
+        pTexto.textContent = promo.texto || ""; // en agregarPromos se guarda en "texto"
+
+        // Precio
+        const pPrecio = document.createElement("p");
+        pPrecio.classList.add("precio");
+        pPrecio.textContent = `Precio: $${promo.precio}`;
+
+        // Botón para agregar al carrito
+        const btn = document.createElement("button");
+        btn.textContent = "Agregar promo al carrito";
+        btn.onclick = () => {
+          if (!promo.precio || isNaN(promo.precio)) {
+            alert("Esta promo no tiene un precio válido.");
+            return;
+          }
+          // uso un id con prefijo para evitar chocar con ids del menú
+          agregarAlCarrito(`promo-${promo.id}`, promo.titulo, Number(promo.precio));
+        };
+
+        li.appendChild(h3);
+        if (pTexto.textContent) li.appendChild(pTexto);
+        li.appendChild(pPrecio);
+        li.appendChild(btn);
+
         ul.appendChild(li);
       });
 
@@ -136,6 +166,5 @@ async function cargarPromos() {
     console.error(err);
   }
 }
-
 
 cargarPromos();

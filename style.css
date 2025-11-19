@@ -2041,3 +2041,12 @@ form div {
     background: #666;
     transform: translateY(-2px);
 }
+
+.listaPromos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
