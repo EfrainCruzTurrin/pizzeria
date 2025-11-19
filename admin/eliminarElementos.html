@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visibilidad de productos</title>
+    <link rel="stylesheet" href="../../style.css">
 </head>
 
-<body>
-    <nav>
+<body class="page-eliminar-elementos">
+
+    <nav class="ee-nav">
         <h1>Visibilidad de productos</h1>
-        <a href="gestionarMenu.html">
-            <button type="button">Volver</button>
-        </a>
+        <a class="ee-btn-back" href="gestionarMenu.html">← Volver</a>
     </nav>
 
-    <main>
+    <main class="ee-main">
+
         <!-- ============ ITEMS ============ -->
-        <section>
+        <section class="ee-card">
             <h2>Items (Pizzas y Bebidas)</h2>
 
             <h3>Items visibles</h3>
@@ -28,7 +29,7 @@
         </section>
 
         <!-- ============ PROMOS ============ -->
-        <section>
+        <section class="ee-card">
             <h2>Promociones</h2>
 
             <h3>Promos visibles</h3>
@@ -37,9 +38,9 @@
             <h3>Promos no visibles</h3>
             <div id="promos-no-visibles"></div>
         </section>
+
     </main>
 
-    <!-- LOG / MENSAJES -->
     <div id="mensaje"></div>
 
     <script src="eliminarElementos.js"></script>
