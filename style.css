@@ -175,19 +175,25 @@ html, body {
     background-color: #b71c1c;
 }
 
+/* Contador totalmente dentro del botón */
 #contador-carrito {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 4px;              /* ajusta según el tamaño del botón */
+    right: 4px;            /* ajusta según el tamaño del botón */
     background-color: #ff9800;
     color: white;
-    font-size: 14px;
+    font-size: 7px;        /* más pequeño */
     font-weight: bold;
-    padding: 2px 6px;
+    padding: 2px 4px;
     border-radius: 50%;
-    min-width: 20px;
-    text-align: center;
+    min-width: 14px;       /* círculo pequeño pero legible */
+    height: 14px;          /* igual que min-width para mantener forma circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
+
 
 /* ===== end of main page ===== */
 
@@ -541,7 +547,7 @@ body {
   font-weight: bold;
 }
 
-/* Botón carrito (estaba inline en HTML) */
+/* Botón carrito */
 #boton-carrito {
   background: #ff9800;
   color: white;
@@ -551,7 +557,7 @@ body {
   font-weight: bold;
 }
 
-/* Buscador (estaba inline en HTML) */
+/* Buscador */
 .busqueda-wrap {
   text-align: center;
   margin-top: 20px;
