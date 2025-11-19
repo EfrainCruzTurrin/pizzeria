@@ -605,11 +605,15 @@ body {
 #bodyRegistro {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  background: #c00707;
+  background-image: linear-gradient(rgba(213, 10, 10, 0.35), rgba(0, 0, 0, 0.831)), url(images/fondoPizza.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 30px 20px;
 }
 
@@ -617,26 +621,40 @@ body {
 #h1Registro {
   text-align: center;
   font-family: "Roboto Condensed", sans-serif;
-  color: #000000;
-  margin-bottom: 30px;
-  font-size: 36px;
-  letter-spacing: 1.5px;
+  color: #ffffff;
+  margin-bottom: 35px;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 2px;
   text-transform: uppercase;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  background: linear-gradient(135deg, #000000ac 0%, #00000053 100%);
+  padding: 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(230, 57, 70, 0.5);
+  position: relative;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 /* Contenedor del formulario */
 #formulario {
-  background: #ffffff;
-  padding: 35px 40px;
-  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.98);
+  padding: 40px 45px;
+  border-radius: 20px;
   max-width: 500px;
   width: 100%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 107, 53, 0.4);
 }
 
 /* Cada campo */
 form div {
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 }
 
 /* Etiquetas */
@@ -644,8 +662,11 @@ form div {
   display: block;
   font-weight: 600;
   font-size: 15px;
-  color: #333;
+  color: #2c2c2c;
   margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 13px;
 }
 
 /* Inputs */
@@ -655,12 +676,12 @@ form div {
 #email,
 #password {
   width: 100%;
-  padding: 14px;
-  border: 1px solid #d4d4d4;
-  border-radius: 8px;
+  padding: 15px 18px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
   font-size: 15px;
   font-family: "Montserrat", sans-serif;
-  background: #f9f9f9;
+  background: #ffffff;
   box-sizing: border-box;
   transition: all 0.3s ease;
 }
@@ -672,32 +693,72 @@ form div {
 #email:focus,
 #password:focus {
   outline: none;
-  border-color: #f2fa01;
-  background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(17, 102, 221, 0.1);
+  border-color: #ff6b35;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.2);
+  transform: translateY(-2px);
 }
 
 /* Botón de envío */
 #botonReg {
   width: 100%;
-  padding: 16px;
-  background: #dd1111;
+  padding: 18px;
+  background: linear-gradient(135deg, #dc2020 0%, #df7171 100%);
   color: #ffffff;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  margin-top: 10px;
-  transition: background 0.3s ease;
+  margin-top: 15px;
+  transition: all 0.3s ease;
   font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 20px rgb(0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+#botonReg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
 }
 
 #botonReg:hover {
-  background: #ff0000;
+  background: linear-gradient(135deg, #ff6b35 0%, #e63946 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(230, 57, 70, 0.6);
+}
+
+#botonReg:hover::before {
+  left: 100%;
+}
+
+#botonReg:active {
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #h1Registro {
+    font-size: 32px;
+    padding: 18px 30px;
+  }
+  
+  #formulario {
+    padding: 30px 25px;
+  }
 }
 
 /* FIN REGISTRO */
+
 /* INICIO INFO */
 #infoTodo {
   margin: 0;

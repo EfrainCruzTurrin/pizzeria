@@ -1,5 +1,5 @@
 // orders.js
-// PONÉ ACÁ LA URL COMPLETA QUE TE DA MOCKAPI
+
 const ORDERS_URL = "https://691d0488d58e64bf0d34bb72.mockapi.io/orders"
 
 /**
