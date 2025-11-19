@@ -495,7 +495,56 @@ body {
   margin: auto;
   margin-bottom: 15px;
 }
+
+/* Aviso login (estaba con estilos inline en HTML) */
+#login-warning {
+  display: none;
+  padding: 20px;
+  background: #ffe5e5;
+  border: 2px solid #d32f2f;
+  color: #b71c1c;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+#login-warning-link {
+  display: inline-block;
+  background: #d32f2f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Botón carrito (estaba inline en HTML) */
+#boton-carrito {
+  background: #ff9800;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Buscador (estaba inline en HTML) */
+.busqueda-wrap {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.busqueda-wrap input {
+  padding: 10px;
+  width: 60%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
 /* FIN CARTA */
+
 
 /* ===== start login ===== */
 
