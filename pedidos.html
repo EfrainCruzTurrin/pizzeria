@@ -10,62 +10,28 @@
 <body>
 
   <!-- ==================== AVISO LOGIN ==================== -->
-  <div id="login-warning"
-       style="display:none;
-              padding:20px;
-              background:#ffe5e5;
-              border:2px solid #d32f2f;
-              color:#b71c1c;
-              font-weight:bold;
-              text-align:center;
-              margin:20px;
-              border-radius:10px;">
+  <div id="login-warning" class="login-warning">
       ⚠ Necesitas iniciar sesión para ver tus pedidos  
       <br><br>
-      <a href="login.html"
-         style="background:#d32f2f;
-                color:white;
-                padding:10px 20px;
-                border-radius:6px;
-                text-decoration:none;">
-          Ir al login
-      </a>
+      <a href="login.html" class="btn-login-warning">Ir al login</a>
   </div>
 
   <!-- Verificación login -->
   <script src="checkLogin.js"></script>
 
-  <h1 style="text-align:center; margin-top:20px;">📦 Mis pedidos</h1>
+  <!-- TÍTULO -->
+  <h1 class="titulo-pedidos">📦 Mis pedidos</h1>
 
-  <!-- Botón volver -->
-  <div style="text-align:center; margin-bottom:20px;">
-    <a href="index.html"
-       style="background:#2196f3;
-              color:white;
-              padding:10px 20px;
-              border-radius:6px;
-              text-decoration:none;">
-      ← Volver al inicio
-    </a>
+  <!-- BOTÓN VOLVER -->
+  <div class="volver-container">
+    <a href="index.html" class="btn-volver">← Volver al inicio</a>
   </div>
 
-  <!-- Contenedor de pedidos -->
-  <div id="mis-pedidos-container"
-       style="max-width:900px;
-              margin:20px auto;
-              padding:20px;
-              display:flex;
-              flex-direction:column;
-              gap:20px;">
-  </div>
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div id="mis-pedidos-container" class="pedidos-container"></div>
 
-  <!-- Mensaje si no hay pedidos -->
-  <p id="no-pedidos"
-     style="display:none;
-            text-align:center;
-            margin-top:30px;
-            font-size:20px;
-            color:#777;">
+  <!-- MENSAJE SIN PEDIDOS -->
+  <p id="no-pedidos" class="no-pedidos">
      No tienes pedidos realizados aún.
   </p>
 
