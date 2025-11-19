@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Pedidos - Admin PizzaLine</title>
   <link rel="stylesheet" href="../style.css">
 </head>
-<body>
 
-  <h1>Panel de Pedidos</h1>
+<body>
+  <nav>
+    <h2>Panel de Pedidos</h2>
+    <a href="administracion.html">
+      <button type="button">Volver</button>
+    </a>
+  </nav>
+
+
 
   <table border="1" cellpadding="10" id="tabla-pedidos">
     <thead>
@@ -24,7 +32,9 @@
     </tbody>
   </table>
 
-  <script src="../orders.js"></script>
-  <script src="pedidos.js"></script>
+  <!-- IMPORTANTE: primero orders.js, luego adminPedidos.js -->
+  <script src="../../orders.js"></script>
+  <script src="adminPedidos.js"></script>
 </body>
+
 </html>
