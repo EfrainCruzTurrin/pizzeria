@@ -5,22 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../../style.css">
 </head>
 
-<body>
-    <nav>
+<body class="page-agregar-promos">
+
+    <nav class="ap-nav">
         <h2>Agregar Promociones</h2>
-        <a href="gestionarMenu.html"><button type="button">Volver</button></a>
+        <a class="ap-btn-back" href="gestionarMenu.html">← Volver</a>
     </nav>
 
-    <main>
-        <section>
-            <form id="form-promos">
+    <main class="ap-main">
+        <section class="ap-container">
 
+            <form id="form-promos">
 
                 <label for="titulo">Título de la promoción</label>
                 <input type="text" id="titulo" required>
-
 
                 <label for="texto">Descripción</label>
                 <textarea id="texto" rows="3" placeholder="Ej: Todos los martes y jueves" required></textarea>
@@ -33,22 +34,22 @@
                     <option value="" disabled selected>Seleccionar imagen...</option>
 
                     <option value="images/promo2x1.png">Promo 2x1</option>
-                    <option value="promo2.jpg">Promo 2</option>
-                    <option value="promo3.jpg">Promo 3</option>
+                    <option value="images/promo2.jpg">Promo 2</option>
+                    <option value="images/promo3.jpg">Promo 3</option>
                 </select>
 
-
-                <label for="activa">
-                    Activa
+                <label class="ap-check" for="activa">
                     <input type="checkbox" id="activa" checked>
+                    Activa
                 </label>
 
-                <button type="submit">Agregar promoción</button>
+                <button type="submit" class="ap-btn-submit">Agregar promoción</button>
 
             </form>
-        </section>
 
-        <div id="mensaje"></div>
+            <div id="mensaje"></div>
+
+        </section>
     </main>
 
     <script src="agregarPromos.js"></script>

@@ -5,19 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../../style.css">
 </head>
 
-<body>
-    <nav>
-        <h2>Crear usuarios</h2>
+<body class="page-gestionar-roles">
 
-        <a href="administracion.html">
-            <button type="button">Volver</button>
-        </a>
+    <nav class="gr-nav">
+        <h2>Crear usuarios</h2>
+        <a href="administracion.html" class="gr-btn-back">← Volver</a>
     </nav>
 
-    <main>
-        <section>
+    <main class="gr-main">
+        <section class="gr-container">
             <form id="form-agregar-usuario">
 
                 <label for="nombre">Nombre</label>
@@ -34,24 +33,21 @@
                     <option value="DELIVERY">Delivery</option>
                 </select>
 
-                <label for="activo">
-                    Activo
+                <label class="gr-checkbox">
                     <input type="checkbox" id="activo" checked>
+                    Activo
                 </label>
 
-                <button type="submit">Crear usuario</button>
+                <button type="submit" class="gr-btn-submit">Crear usuario</button>
             </form>
 
-
+            <div id="mensaje"></div>
         </section>
-
-        <div id="mensaje"></div>
     </main>
-
 
     <script src="gestionarRoles.js"></script>
 
-
 </body>
+
 
 </html>

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cargarItems();
     cargarPromos();
 
-   
+
     document.body.addEventListener("click", manejarClickGlobal);
 });
 
@@ -29,11 +29,11 @@ async function cargarItems() {
         if (!res.ok) throw new Error("Error al obtener items");
 
         const productos = await res.json();
-        productosCache = productos; 
+        productosCache = productos;
 
         productos.forEach(prod => {
             const card = document.createElement("div");
-            card.classList.add("card-item");
+            card.classList.add("ee-item");
             const disponible = prod.disponible !== false;
 
             card.innerHTML = `
@@ -76,18 +76,18 @@ async function cargarPromos() {
 
     contVisibles.innerHTML = "";
     contNoVisibles.innerHTML = "";
-    
+
 
     try {
         const res = await fetch(URL_PROMOS);
         if (!res.ok) throw new Error("Error al obtener promos");
 
         const promos = await res.json();
-        promosCache = promos; 
+        promosCache = promos;
 
         promos.forEach(promo => {
             const card = document.createElement("div");
-            card.classList.add("card-promo");
+            card.classList.add("ee-promo");
             const disponible = promo.disponible !== false;
 
             card.innerHTML = `
@@ -125,7 +125,7 @@ async function cargarPromos() {
 async function manejarClickGlobal(e) {
     const mensaje = document.getElementById("mensaje");
 
-    
+
     if (e.target.classList.contains("btn-toggle-item")) {
         const id = e.target.dataset.id;
         const prod = productosCache.find(p => p.id == id);
@@ -146,7 +146,7 @@ async function manejarClickGlobal(e) {
                 ? "✔️ Item marcado como visible."
                 : "✔️ Item ocultado correctamente.";
 
-            
+
             cargarItems();
 
         } catch (err) {
@@ -177,7 +177,7 @@ async function manejarClickGlobal(e) {
         }
     }
 
-    
+
     if (e.target.classList.contains("btn-toggle-promo")) {
         const id = e.target.dataset.id;
         const promo = promosCache.find(p => p.id == id);

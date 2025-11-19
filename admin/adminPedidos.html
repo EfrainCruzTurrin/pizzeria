@@ -7,34 +7,38 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 
-<body>
-  <nav>
+<body class="page-admin-pedidos">
+
+  <nav class="ap-nav">
     <h2>Panel de Pedidos</h2>
-    <a href="administracion.html">
-      <button type="button">Volver</button>
-    </a>
+    <a class="ap-btn-back" href="../USER (mockapi)/administracion.html">← Volver</a>
   </nav>
 
+  <main class="ap-main">
+    <div class="ap-container">
 
+      <h3>Pedidos registrados</h3>
 
-  <table border="1" cellpadding="10" id="tabla-pedidos">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Usuario</th>
-        <th>Items</th>
-        <th>Total</th>
-        <th>Estado</th>
-        <th>Cambiar estado</th>
-      </tr>
-    </thead>
-    <tbody id="body-pedidos">
-    </tbody>
-  </table>
+      <table class="ap-table" id="tabla-pedidos">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Usuario</th>
+            <th>Items</th>
+            <th>Total</th>
+            <th>Estado</th>
+            <th>Cambiar estado</th>
+          </tr>
+        </thead>
+        <tbody id="body-pedidos"></tbody>
+      </table>
 
-  <!-- IMPORTANTE: primero orders.js, luego adminPedidos.js -->
+    </div>
+  </main>
+
   <script src="../../orders.js"></script>
   <script src="adminPedidos.js"></script>
+
 </body>
 
 </html>
