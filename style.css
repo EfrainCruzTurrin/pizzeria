@@ -20,6 +20,38 @@ html, body {
     height: 90px;
 }
 
+#login-warning {
+  display:none;
+              padding:20px;
+              background:#ffe5e5;
+              border:2px solid #d32f2f;
+              color:#b71c1c;
+              font-weight:bold;
+              text-align:center;
+              margin:20px;
+              border-radius:10px;
+}
+
+#inicio453 {
+  background:#d32f2f;
+              color:white;
+              padding:10px 20px;
+              border-radius:6px;
+              text-decoration:none;
+}
+
+#logoPizzaLinePng {
+  width:150px;
+  height:100px;
+  border-radius:8px;
+}
+
+.logo {
+  display:flex;
+  align-items:center;
+  gap:10px
+}
+
 .headerPrincipal .logo {
     display: flex;
     align-items: center;
@@ -503,6 +535,11 @@ body {
     line-height: 1.4;
 }
 
+#logoPizza56 {
+  width: 150px;
+  height: 100px;
+}
+
 /* --- end sucursales section --- */
 
 /* --- start carrito --- */
@@ -777,6 +814,12 @@ form div {
 }
 
 /* HISTORIA */
+
+#logoPizza22{
+  width: 150px;
+  height: 100x;
+}
+
 #historia hr {
   border: none;
   border-top: 2px dashed #ffd700;
@@ -903,3 +946,7 @@ form div {
   text-transform: uppercase;
 }
 /*FIN BOTON*/
+
+#grafCont {
+  width: 600px; margin:40px auto;
+}
