@@ -189,24 +189,113 @@ html, body {
     text-align: center;
 }
 
-/* ===== CARRITO ===== */
-.carrito-lista {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 10px;
+/* ===== end of main page ===== */
+
+/* ===== START CARRITO ===== */
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
 
+body {
+    background-color: #fff8f0;
+    color: #333;
+}
+
+/* ===== AVISO LOGIN ===== */
+#login-warning {
+    display: none;
+    padding: 20px;
+    background: #ffe5e5;
+    border: 2px solid #d32f2f;
+    color: #b71c1c;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#warningCarritoBtn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #d32f2f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#warningCarritoBtn:hover {
+    background: #b71c1c;
+}
+
+/* ===== HEADER (igual estilo que headerLogin) ===== */
+.headerCarrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d32f2f;
+    color: white;
+    padding: 15px 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ===== MENSAJE GENERAL ===== */
+#msg-box {
+    display: none;
+    padding: 15px;
+    margin: 20px auto;
+    text-align: center;
+    background: #fff3cd;
+    border: 1px solid #ffcc00;
+    border-radius: 10px;
+    font-weight: bold;
+    max-width: 600px;
+}
+
+/* ===== TÍTULO CARRITO ===== */
+#headerCarrito {
+    text-align: center;
+    margin: 25px 0;
+    color: #d32f2f;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* ===== LISTA DEL CARRITO ===== */
+.carrito-lista {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffe5e5;
+    border-radius: 10px;
+}
+
+/* === ADICIONAL PARA CENTRAR CONTENEDOR === */
+#carrito-container {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Cada item */
 .carrito-item {
+    background: white;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Controles */
 .carrito-controles {
     display: flex;
     align-items: center;
@@ -219,6 +308,7 @@ html, body {
     cursor: pointer;
 }
 
+/* Eliminar */
 .eliminar {
     background-color: #d32f2f;
     color: white;
@@ -228,7 +318,21 @@ html, body {
     cursor: pointer;
 }
 
-/* Botones de acción */
+/* ===== TOTAL ===== */
+#carrito-total {
+    text-align: center;
+    font-size: 24px;
+    color: #d32f2f;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* ===== ACCIONES ===== */
+#accionesCarrito {
+    text-align: center;
+    margin: 20px 0;
+}
+
 .btn-vaciar,
 .btn-finalizar {
     padding: 10px 20px;
@@ -236,6 +340,7 @@ html, body {
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .btn-vaciar {
@@ -248,29 +353,37 @@ html, body {
     color: white;
 }
 
-/* ===== PEDIDOS ===== */
-.pedido-card {
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+/* ===== BOTÓN VOLVER FIJO ===== */
+#volverCarrito {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+#btnVolverCarrito {
+    background-color: #2196f3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#btnVolverCarrito:hover {
+    background-color: #0b7dda;
+}
+
+/* ===== FOOTER (igual estilo que footerLogin) ===== */
+.footerCarrito {
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    .mainPrincipal {
-        grid-template-columns: 1fr;
-    }
-
-    .navPrincipal ul {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .promo-card {
-        width: 100%;
-    }
 
     .carrito-item {
         flex-direction: column;
@@ -281,9 +394,17 @@ html, body {
     .carrito-controles {
         justify-content: flex-start;
     }
+
+    #accionesCarrito button {
+        width: 90%;
+        margin: 5px auto;
+        display: block;
+    }
 }
 
-/* ===== end of main page ===== */
+/* ===== END CARRITO ===== */
+
+
 
 /* INICIO DE CARTA */
 /* Fondo general */
@@ -396,7 +517,56 @@ html, body {
   margin: auto;
   margin-bottom: 15px;
 }
+
+/* Aviso login (estaba con estilos inline en HTML) */
+#login-warning {
+  display: none;
+  padding: 20px;
+  background: #ffe5e5;
+  border: 2px solid #d32f2f;
+  color: #b71c1c;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+#login-warning-link {
+  display: inline-block;
+  background: #d32f2f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Botón carrito (estaba inline en HTML) */
+#boton-carrito {
+  background: #ff9800;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Buscador (estaba inline en HTML) */
+.busqueda-wrap {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.busqueda-wrap input {
+  padding: 10px;
+  width: 60%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
 /* FIN CARTA */
+
 
 /* ===== start login ===== */
 
@@ -541,63 +711,6 @@ body {
 }
 
 /* --- end sucursales section --- */
-
-/* --- start carrito --- */
-.carrito-lista {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin: 20px;
-}
-
-.carrito-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px;
-  background: #eee;
-  border-radius: 8px;
-}
-
-.carrito-controles {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.controles button {
-  padding: 5px 10px;
-}
-
-.eliminar {
-  background: red;
-  color: white;
-  border: none;
-  padding: 6px 10px;
-  border-radius: 5px;
-}
-
-.btn-finalizar {
-  background: green;
-  color: white;
-  padding: 12px;
-  border: none;
-  margin: 10px;
-  border-radius: 10px;
-  font-size: 17px;
-}
-
-.btn-vaciar {
-  background: gray;
-  color: white;
-  padding: 12px;
-  border: none;
-  margin: 10px;
-  border-radius: 10px;
-  font-size: 17px;
-}
-/* --- end carrito --- */
-
 
 
 /* INICIO REGISTRO */
@@ -1012,6 +1125,7 @@ form div {
   width: 600px; margin:40px auto;
 }
 
+<<<<<<< HEAD
 /* ADMINISTRACION */
 
 .page-administracion {
@@ -1140,11 +1254,77 @@ form div {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.15);
+=======
+/* ====================== MIS PEDIDOS ====================== */
+
+/* Aviso login */
+.login-warning {
+    display: none;
+    padding: 20px;
+    background: #ffe5e5;
+    border: 2px solid #d32f2f;
+    color: #b71c1c;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.btn-login-warning {
+    display: inline-block;
+    margin-top: 10px;
+    background: #d32f2f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-login-warning:hover {
+    background: #b71c1c;
+}
+
+/* Título */
+.titulo-pedidos {
+    text-align: center;
+    margin-top: 20px;
+    color: #d32f2f;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Botón volver */
+.volver-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-volver {
+    background: #2196f3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-volver:hover {
+    background: #0b7dda;
+}
+
+/* Contenedor principal */
+.pedidos-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+>>>>>>> 6271dbef31f3edfcab209be0676f2130400c6a12
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+<<<<<<< HEAD
 /* BOTONES PRINCIPALES */
 .page-gestionar-menu .menu-btn {
     display: block;
@@ -1737,3 +1917,58 @@ form div {
     margin-top: 12px;
     font-size: 14px;
 }
+=======
+/* Mensaje "no pedidos" */
+.no-pedidos {
+    display: none;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+    color: #777;
+}
+
+/* ====================== TARJETAS DE PEDIDOS ====================== */
+
+.pedido-card {
+    background: #fff5eb;
+    border: 1px solid #ffcb9a;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.1);
+}
+
+.pedido-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.pedido-items {
+    padding-left: 15px;
+}
+
+.pedido-items li {
+    margin-bottom: 4px;
+}
+
+.pedido-total {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #d32f2f;
+}
+
+.pedido-estado {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Estados */
+.estado-pendiente { color: #d97706; }   /* naranja */
+.estado-proceso   { color: #0ea5e9; }   /* celeste */
+.estado-finalizado { color: #16a34a; }  /* verde */
+
+/* ====================== END MIS PEDIDOS ====================== */
+>>>>>>> 6271dbef31f3edfcab209be0676f2130400c6a12

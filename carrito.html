@@ -1,76 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Carrito - PizzaLine</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Carrito - PizzaLine</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- ==================== AVISO LOGIN ==================== -->
-  <div id="login-warning"
-       style="display:none;
-              padding:20px;
-              background:#ffe5e5;
-              border:2px solid #d32f2f;
-              color:#b71c1c;
-              font-weight:bold;
-              text-align:center;
-              margin:20px;
-              border-radius:10px;">
-      ⚠ Necesitas iniciar sesión para continuar  
-      <br><br>
-      <a href="login.html"
-         style="background:#d32f2f;
-                color:white;
-                padding:10px 20px;
-                border-radius:6px;
-                text-decoration:none;">
-          Ir al login
-      </a>
-  </div>
+    <!-- ===== HEADER ===== -->
+    <header class="headerCarrito">🛒 Tu Carrito</header>
 
-  <!-- Caja de mensajes -->
-  <div id="msg-box"
-       style="display:none; padding:15px;
-              margin:20px; text-align:center;
-              background:#fff3cd; border:1px solid #ffcc00;
-              border-radius:10px; font-weight:bold;">
-  </div>
+    <!-- ===== AVISO LOGIN ===== -->
+    <div id="login-warning">
+        ⚠ Necesitas iniciar sesión para continuar  
+        <br><br>
+        <a href="login.html" id="warningCarritoBtn">Ir al login</a>
+    </div>
 
-  <!-- LOGIN CHECK -->
-  <script src="js/checkLogin.js"></script>
+    <!-- ===== MENSAJES ===== -->
+    <div id="msg-box"></div>
 
-  <h1 style="text-align:center;">🛒 Tu Carrito</h1>
+    <!-- LOGIN CHECK -->
+    <script src="checkLogin.js"></script>
 
-  <!-- Botón volver -->
-  <div style="text-align:center; margin-bottom:20px;">
-    <a href="carta.html"
-       style="background:#2196f3;
-              color:white;
-              padding:10px 20px;
-              border-radius:6px;
-              text-decoration:none;">
-      ← Volver al menú
-    </a>
-  </div>
+    <!-- ===== LISTA DEL CARRITO ===== -->
+    <div id="carrito-container" class="carrito-lista"></div>
 
-  <!-- Lista de productos -->
-  <div id="carrito-container" class="carrito-lista" style="max-width:600px; margin:auto;"></div>
+    <!-- ===== TOTAL ===== -->
+    <h2 id="carrito-total">Total: $0</h2>
 
-  <!-- Total -->
-  <h2 id="carrito-total" style="text-align:center;">Total: $0</h2>
+    <!-- ===== ACCIONES ===== -->
+    <div id="accionesCarrito">
+        <button id="btnVaciarCarrito" class="btn-vaciar" onclick="vaciarCarrito()">Vaciar carrito</button>
+        <button id="btnFinalizarCarrito" class="btn-finalizar" onclick="finalizarPedido()">Finalizar pedido</button>
+    </div>
 
-  <!-- Acciones -->
-  <div style="text-align:center; margin-top:20px;">
-    <button onclick="vaciarCarrito()" class="btn-vaciar" style="margin-right:10px;">Vaciar carrito</button>
-    <button onclick="finalizarPedido()" class="btn-finalizar">Finalizar pedido</button>
-  </div>
+    <!-- ===== BOTÓN VOLVER ===== -->
+    <div id="volverCarrito">
+        <a id="btnVolverCarrito" href="carta.html">← Volver</a>
+    </div>
 
-  <!-- Scripts -->
-  <script src="orders.js"></script>
-  <script src="carrito.js"></script>
+    <!-- ===== FOOTER ===== -->
+    <footer class="footerCarrito">
+        PizzaLine © 2025 - Todos los derechos reservados
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="orders.js"></script>
+    <script src="carrito.js"></script>
 
 </body>
 </html>

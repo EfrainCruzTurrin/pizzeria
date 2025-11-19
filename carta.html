@@ -15,37 +15,21 @@
 
 <body id="bodyCarta">
 
-  <!-- ==================== AVISO LOGIN ==================== -->
-  <div id="login-warning" style="display:none;
-              padding:20px;
-              background:#ffe5e5;
-              border:2px solid #d32f2f;
-              color:#b71c1c;
-              font-weight:bold;
-              text-align:center;
-              margin:20px;
-              border-radius:10px;">
+  <!-- AVISO LOGIN -->
+  <div id="login-warning">
     ⚠ Necesitas iniciar sesión para continuar
     <br><br>
-    <a href="login.html" style="background:#d32f2f;
-                color:white;
-                padding:10px 20px;
-                border-radius:6px;
-                text-decoration:none;">
-      Ir al login
-    </a>
+    <a href="login.html" id="login-warning-link">Ir al login</a>
   </div>
 
-  <script src="js/checkLogin.js"></script>
-  <!-- ==================== FIN AVISO ==================== -->
+  <script src="checkLogin.js"></script>
 
-  <!-- ===== HEADER ===== -->
+  <!-- HEADER -->
   <div class="headerPrincipal">
     <div class="logo">
       <img src="images/pizzalinePNG3.png" alt="PizzaLine Logo" id="cartaLogoPng">
     </div>
 
-    <!-- NAV -->
     <div class="navPrincipal">
       <ul>
         <li><a href="info.html">Acerca de Nosotros</a></li>
@@ -58,16 +42,8 @@
       <a href="login.html">Login</a>
     </div>
 
-    <!-- BOTÓN CARRITO -->
     <div class="carrito-btn">
-      <a href="carrito.html" id="boton-carrito" style="background:#ff9800;
-                  color:white;
-                  padding:10px 20px;
-                  border-radius:6px;
-                  text-decoration:none;
-                  font-weight:bold;">
-        🛒 (0)
-      </a>
+      <a href="carrito.html" id="boton-carrito">🛒 (0)</a>
     </div>
   </div>
 
@@ -79,9 +55,8 @@
   <h1 id="tituloCarta"><strong>MENÚ PIZZALINE</strong></h1>
 
   <!-- BUSCADOR -->
-  <div class="busqueda-wrap" style="text-align:center; margin-top:20px;">
-    <input id="search-input" type="search" placeholder="Buscar pizza por nombre..."
-      style="padding:10px; width:60%; border-radius:8px; border:1px solid #ccc; font-size:16px;">
+  <div class="busqueda-wrap">
+    <input id="search-input" type="search" placeholder="Buscar pizza por nombre...">
   </div>
 
   <div id="containerCarta">
@@ -91,14 +66,14 @@
         <!-- PIZZAS -->
         <section id="seccion-pizzas">
           <h2>Pizzas</h2>
-          <img src="images/pizza.png" width="120px" alt="icono de pizza" id="iconPizza">
+          <img src="images/pizza.png" width="120" alt="icono de pizza" id="iconPizza">
           <ul id="lista-pizzas" class="listaPizzas"></ul>
         </section>
 
         <!-- BEBIDAS -->
         <section id="seccion-bebidas">
           <h2>Bebidas</h2>
-          <img src="images/bebidas.png" width="120px" alt="icono bebidas" id="iconBebidas">
+          <img src="images/bebidas.png" width="120" alt="icono bebidas" id="iconBebidas">
           <ul id="lista-bebidas" class="listaBebidas"></ul>
         </section>
 
@@ -106,14 +81,14 @@
           <h2>Promociones</h2>
           <ul id="lista-promos" class="listaPromos"></ul>
         </section>
-        
+
       </div>
     </main>
   </div>
 
   <script src="carta.js"></script>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <div class="footerPrincipal">
     <p>© 2025 PizzaLine - Todos los derechos reservados.</p>
   </div>
