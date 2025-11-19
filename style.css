@@ -189,24 +189,101 @@ html, body {
     text-align: center;
 }
 
-/* ===== CARRITO ===== */
-.carrito-lista {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 10px;
+/* ===== end of main page ===== */
+
+/* ===== START CARRITO ===== */
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
 
+body {
+    background-color: #fff8f0;
+    color: #333;
+}
+
+/* ===== AVISO LOGIN ===== */
+#login-warning {
+    display: none;
+    padding: 20px;
+    background: #ffe5e5;
+    border: 2px solid #d32f2f;
+    color: #b71c1c;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#warningCarritoBtn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #d32f2f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#warningCarritoBtn:hover {
+    background: #b71c1c;
+}
+
+/* ===== MENSAJE GENERAL ===== */
+#msg-box {
+    display: none;
+    padding: 15px;
+    margin: 20px auto;
+    text-align: center;
+    background: #fff3cd;
+    border: 1px solid #ffcc00;
+    border-radius: 10px;
+    font-weight: bold;
+    max-width: 600px;
+}
+
+/* ===== TÍTULO CARRITO ===== */
+#headerCarrito {
+    text-align: center;
+    margin: 25px 0;
+    color: #d32f2f;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* ===== LISTA DEL CARRITO ===== */
+.carrito-lista {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffe5e5;
+    border-radius: 10px;
+}
+
+/* === ADICIONAL PARA CENTRAR CONTENEDOR === */
+#carrito-container {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Cada item */
 .carrito-item {
+    background: white;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Controles */
 .carrito-controles {
     display: flex;
     align-items: center;
@@ -219,6 +296,7 @@ html, body {
     cursor: pointer;
 }
 
+/* Eliminar */
 .eliminar {
     background-color: #d32f2f;
     color: white;
@@ -228,7 +306,21 @@ html, body {
     cursor: pointer;
 }
 
-/* Botones de acción */
+/* ===== TOTAL ===== */
+#carrito-total {
+    text-align: center;
+    font-size: 24px;
+    color: #d32f2f;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* ===== ACCIONES ===== */
+#accionesCarrito {
+    text-align: center;
+    margin: 20px 0;
+}
+
 .btn-vaciar,
 .btn-finalizar {
     padding: 10px 20px;
@@ -236,6 +328,7 @@ html, body {
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .btn-vaciar {
@@ -248,29 +341,28 @@ html, body {
     color: white;
 }
 
-/* ===== PEDIDOS ===== */
-.pedido-card {
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+/* ===== BOTÓN VOLVER FIJO ===== */
+#volverCarrito {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+#btnVolverCarrito {
+    background-color: #2196f3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#btnVolverCarrito:hover {
+    background-color: #0b7dda;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    .mainPrincipal {
-        grid-template-columns: 1fr;
-    }
-
-    .navPrincipal ul {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .promo-card {
-        width: 100%;
-    }
 
     .carrito-item {
         flex-direction: column;
@@ -281,9 +373,16 @@ html, body {
     .carrito-controles {
         justify-content: flex-start;
     }
+
+    #accionesCarrito button {
+        width: 90%;
+        margin: 5px auto;
+        display: block;
+    }
 }
 
-/* ===== end of main page ===== */
+/* ===== END CARRITO ===== */
+
 
 /* INICIO DE CARTA */
 /* Fondo general */
