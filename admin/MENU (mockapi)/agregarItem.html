@@ -5,48 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="../../style.css">
 </head>
 
-<body>
-    <nav>
-        <h2>Agregar Item</h2>
-        <a href="../gestionarMenu.html">
-            <button type="button">Volver</button>
-        </a>
+<body class="page-agregar-item">
+    <nav class="ai-nav">
+        <h2>Agregar item</h2>
+        <a class="ai-btn-back" href="../gestionarMenu.html">← Volver</a>
     </nav>
 
-    <div>
-        <form id="form-agregar">
+    <main class="ai-main">
+        <div class="ai-container">
+            <form id="form-agregar">
 
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" required>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" required>
 
-            <label>Tipo</label>
-            <div>
-                <label><input type="radio" name="tipo" value="Pizza" required> Pizza</label>
-                <label><input type="radio" name="tipo" value="Bebida" required> Bebida</label>
-            </div>
+                <label>Tipo</label>
+                <div class="ai-radio-group">
+                    <label><input type="radio" name="tipo" value="Pizza" required> Pizza</label>
+                    <label><input type="radio" name="tipo" value="Bebida" required> Bebida</label>
+                </div>
 
-            <label for="precio">Precio</label>
-            <input type="number" id="precio" required>
+                <label for="precio">Precio</label>
+                <input type="number" id="precio" required>
 
-            <label for="disponible">
-                Disponible
-                <input type="checkbox" id="disponible" checked>
-            </label> <br> <br>
+                <label class="ai-check-label" for="disponible">
+                    <input type="checkbox" id="disponible" checked>
+                    Disponible
+                </label>
 
-            <label for="descripcionItem">Descripción:</label>
-            <textarea name="descripcionItem" id="descripcionItem"></textarea> 
+                <label for="descripcionItem">Descripción</label>
+                <textarea name="descripcionItem" id="descripcionItem"></textarea>
 
-            <br> <br>
+                <button type="submit" class="ai-btn-submit">Cargar producto</button>
+            </form>
 
-            <button type="submit">Cargar Producto</button>
-        </form>
-    </div>
+            <div id="mensaje"></div>
+        </div>
+    </main>
 
-    <div id="mensaje"></div>
-<script src="agregarItem.js"></script>
+    <script src="agregarItem.js"></script>
 </body>
 
 </html>
