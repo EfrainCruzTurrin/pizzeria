@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi perfil - PizzaLine</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  
+  <!-- HEADER -->
+<div class="headerPrincipal" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+  <div class="logo">
+    <img src="../../images/pizzalinePNG3.png" alt="PizzaLine Logo" style="height: 80px; width: auto; aspect-ratio: 3 / 1; object-fit: contain;" />
+  </div>
+  <div id="auth-area"></div>
+</div>
+
+<main style="padding: 20px;">
+  <h1 style="margin-bottom: 30px;">Mi perfil</h1>
+
+  <div id="perfil-user" style="display: flex; flex-direction: column; gap: 25px; max-width: 400px;">
+    <div style="display: flex; flex-direction: column; gap: 5px;">
+      <strong>Nombre:</strong>
+      <span id="nombre"></span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 5px;">
+      <strong>Email:</strong>
+      <span id="email"></span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <label for="nueva-pass">Nueva contraseña:</label>
+      <input type="password" id="nueva-pass" placeholder="Ingresá nueva contraseña">
+      <button id="btn-change">Cambiar contraseña</button>
+    </div>
+  </div>
+
+  <p id="mensaje" style="margin-top: 30px;"></p>
+</main>
+
+  <script src="perfilUsuario.js"></script>
+</body>
+</html>
