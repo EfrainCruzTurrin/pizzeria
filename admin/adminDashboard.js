@@ -1,5 +1,4 @@
-const API_BASE = "https://6913eb6df34a2ff1170d8dda.mockapi.io";
-const ORDERS_URL = `${API_BASE}/orders`;
+
 
 /* ------------ Obtener datos de MockAPI ------------ */
 async function obtenerDatosPedidos() {

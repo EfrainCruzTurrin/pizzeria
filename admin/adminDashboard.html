@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Dashboard - Admin PizzaLine</title>
@@ -8,6 +9,7 @@
   <!-- Chart.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
 
   <h1 style="text-align:center;">Dashboard de Pedidos</h1>
@@ -15,15 +17,14 @@
 
   <!-- Contenedor del gráfico -->
   <div style="width: 600px; margin:40px auto;">
-      <canvas id="graficoPedidos"></canvas>
+    <canvas id="graficoPedidos"></canvas>
   </div>
 
   <!-- Botón para volver al panel admin -->
   <div style="text-align:center; margin-top:30px;">
-    <a href="adminPedidos.html" 
-       style="background:#d32f2f; color:white; padding:10px 20px;
+    <a href="adminPedidos.html" style="background:#d32f2f; color:white; padding:10px 20px;
               border-radius:6px; text-decoration:none;">
-       ← Volver al panel de pedidos
+      ← Volver al panel de pedidos
     </a>
   </div>
 
@@ -31,7 +32,8 @@
   <script src="../orders.js"></script>
 
   <!-- Dashboard.js donde generamos las métricas -->
-  <script src="dashboard.js"></script>
+  <script src="adminDashboard.js"></script>
 
 </body>
+
 </html>
