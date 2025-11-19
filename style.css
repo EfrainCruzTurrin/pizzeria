@@ -17,6 +17,7 @@ html, body {
     background-color: #d32f2f;
     color: white;
     padding: 10px 20px;
+    height: 90px;
 }
 
 .headerPrincipal .logo {
@@ -26,7 +27,7 @@ html, body {
 }
 
 .headerPrincipal .logo img {
-    width: 150px;
+    width: 10px;
     height: 80px;
 }
 
@@ -41,6 +42,8 @@ html, body {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
+    margin-left: 50px;
 }
 
 .login-btn a {
@@ -255,7 +258,12 @@ html, body {
 #bodyCarta {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #dd1111f5;
+  background: #8d1111;
+}
+
+#cartaLogoPng{
+  height: 100px;
+  width: 150px;
 }
 
 /* Título */
